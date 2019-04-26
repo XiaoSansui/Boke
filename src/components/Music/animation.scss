@@ -1,0 +1,104 @@
+.showControl {
+  animation: showControl .3s ease both;
+}
+
+.hideControl {
+  animation: hideControl .3s ease both;
+}
+
+.showTop {
+  animation: showTop .3s ease both;
+}
+
+.hideTop {
+  animation: hideTop .3s ease both;
+}
+
+.showList {
+  animation: showList .3s ease both;
+}
+
+.hideList {
+  animation: hideList .3s ease both;
+}
+
+
+@keyframes showControl {
+  from {
+    transform: translateX(-100vw) translateX(30px);
+  }
+
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes hideControl {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-100vw) translateX(30px);
+  }
+}
+
+@keyframes showTop {
+  from {
+    top: 0;
+  }
+
+  to {
+    top: -26px;
+  }
+}
+
+@keyframes hideTop {
+  from {
+    top: -26px;
+  }
+
+  to {
+    top: 0;
+  }
+}
+
+@keyframes showList {
+  from {
+    bottom: -320px;
+  }
+
+  to {
+    bottom: 51px;
+  }
+}
+
+@keyframes hideList {
+  from {
+    bottom: 51px;
+  }
+
+  to {
+    bottom: -320px;
+  }
+}
+
+@keyframes showComplete {
+  from {
+    bottom: -320px;
+  }
+
+  to {
+    bottom: 51px;
+  }
+}
+
+@keyframes hideComplete {
+  from {
+    bottom: 51px;
+  }
+
+  to {
+    bottom: -320px;
+  }
+}

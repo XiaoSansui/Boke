@@ -1,0 +1,77 @@
+.maskInfo {
+  width: 30vw;
+  position: absolute;
+  top: 35vh;
+  left: 35vw;
+  z-index: 5;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 1em;
+  .avatar {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 4px solid rgba(0, 0, 0, 0.5);
+    margin-bottom: 1em;
+    transition: 1s;
+    img {
+      width: auto;
+      margin-left: -25%;
+      height: 100%;
+      cursor: pointer;
+      transition: 1.2s;
+    }
+    &:hover {
+      transform: rotate(360deg);
+      img {
+        transform: scale(1.5);
+      }
+    }
+  }
+  .motto {
+    padding: 15px 30px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 50px;
+    margin-bottom: 1em;
+    p {
+      color: white;
+      font-size: 16px;
+    }
+  }
+  .contact {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    li {
+      margin: 0 1em;
+      text-align: center;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background-color: rgba(0, 0, 0, 0.5);
+      cursor: pointer;
+      span {
+        display: inline-block;
+        width: 100%;
+        height: 100%;
+        // padding: 7px;
+      }
+      &:nth-child(1) span {
+        background: url("/static/image/social_icon.png");
+        background-position: -4px -4px;
+      }
+      &:nth-child(2) span {
+        background: url("/static/image/social_icon.png");
+        background-position: -4px -484px;
+      }
+      &:nth-child(3) span {
+        background: url("/static/image/social_icon.png");
+        background-position: -4px -44px;
+      }
+    }
+  }
+}
