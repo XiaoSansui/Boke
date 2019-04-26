@@ -1,11 +1,18 @@
 <template>
   <div>
+    <NavBar/>
     <router-view></router-view>
   </div>
 </template>
 
 <script>
-export default {};
+import NavBar from "./components/navBar/Index";
+
+export default {
+   components: {
+    NavBar
+  }
+};
 </script>
 
 <style>
