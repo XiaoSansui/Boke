@@ -1,0 +1,26 @@
+.recordList {
+  width: calc(100% - 80px);
+  border-radius: 3px;
+  margin: 10px 0;
+  background-color: #eaeaea;
+  padding: 20px 40px;
+
+  .content {
+    border: 2px dashed #999;
+    padding: 10px 30px;
+
+    ul {
+      li {
+        list-style: disc;
+        font-size: 16px;
+        padding: 8px 0;
+
+        p {
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+        }
+      }
+    }
+  }
+}

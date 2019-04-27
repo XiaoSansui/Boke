@@ -87,6 +87,7 @@ input {
     padding: 0;
     border: 0;
     font-size: 100%;
+    font-size: 16px;
     font-weight: normal;
     vertical-align: baseline;
 }
@@ -178,3 +179,20 @@ body {
     text-overflow: ellipsis;
     white-space: nowrap;
 }
+.noselect {
+
+    -webkit-touch-callout: none; /* iOS Safari */
+    
+    -webkit-user-select: none; /* Chrome/Safari/Opera */
+    
+    -khtml-user-select: none; /* Konqueror */
+    
+    -moz-user-select: none; /* Firefox */
+    
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    
+    user-select: none; /* Non-prefixed version, currently
+    
+    not supported by any browser */
+    
+    }

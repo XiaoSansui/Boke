@@ -1,0 +1,23 @@
+.tips {
+  width: calc(100% - 40px);
+  border-radius: 3px;
+  margin: 10px 0;
+  background-color: #FFF6B5;
+  padding: 20px;
+  display: flex;
+  flex-direction: row;
+
+  .icon {
+    .icon-xiayishou {
+      font-size: 25px;
+    }
+  }
+
+  .content {
+    width: 95%;
+    font-size: 18px;
+    margin-left: 10px;
+    line-height: 20px;
+    word-wrap: break-word;
+  }
+}

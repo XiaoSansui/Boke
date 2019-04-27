@@ -1,14 +1,17 @@
 <template>
   <div>
       <Curtain/>
+      <Article/>
   </div>
 </template>
 
 <script>
 import Curtain from "@/components/curtain/index";
+import Article from "@/components/article/index";
 export default {
   components: {
-    Curtain
+    Curtain,
+    Article
   }
 };
 </script>
