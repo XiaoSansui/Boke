@@ -1,7 +1,7 @@
 <template>
   <div class="article-wrap">
     <slot name="label">
-      <div class="label">
+      <div class="article-label">
         <div class="icon">
           <i class="iconfont icon-xiayishou"></i>
         </div>

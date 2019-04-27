@@ -10,7 +10,7 @@ import NavBar from "./components/navBar/Index";
 
 export default {
    components: {
-    NavBar
+    NavBar,
   }
 };
 </script>

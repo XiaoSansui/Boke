@@ -1,7 +1,7 @@
 <template>
   <div class="article-wrap">
     <slot name="title">
-      <div class="title">{{data}}</div>
+      <div class="article-title">{{data}}</div>
     </slot>
   </div>
 </template>

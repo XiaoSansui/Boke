@@ -35,5 +35,5 @@ export default {
 </script>
 
 <style scoped lang="scss">
-@import './Index.scss';
+@import "./Index.scss";
 </style>

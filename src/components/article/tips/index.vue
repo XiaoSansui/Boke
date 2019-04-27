@@ -1,7 +1,7 @@
 <template>
   <div class="article-wrap">
     <slot name="tips">
-      <div class="tips">
+      <div class="article-tips">
         <div class="icon">
           <i class="iconfont icon-xiayishou"></i>
         </div>

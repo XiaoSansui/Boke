@@ -1,27 +1,18 @@
 <template>
-  <div class="article-wrap">
-    <slot name="label">
-      <div class="label">
-        <div class="icon">
-          <i class="iconfont icon-xiayishou"></i>
-        </div>
-        <div class="content">
-          <p>{{data}}</p>
-        </div>
-      </div>
-    </slot>
+  <div class="switchWrap">
+    <div class="switch">
+      <p class="label">Previous Post</p>
+      <p class="title">xxxxxxxxx</p>
+    </div>
+    <div class="switch">
+      <p class="label">Next Post</p>
+      <p class="title">xxxxxxxxx</p>
+    </div>
   </div>
 </template>
 
 <script>
-export default {
-  props: {
-    data: {
-      type: String,
-      default: "label"
-    }
-  }
-};
+export default {};
 </script>
 
 <style lang="scss" scoped>

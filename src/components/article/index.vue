@@ -8,6 +8,8 @@
       <Synopsis :data="synopsis" slot="synopsis"/>
       <RecordList :data="recordList" slot="recordList"/>
       <Appreciate/>
+      <HandlePage/>
+      <Author/>
     </article>
   </div>
 </template>
@@ -20,6 +22,8 @@ import Tips from "./tips/index";
 import Synopsis from "./synopsis/index";
 import RecordList from "./recordList/index";
 import Appreciate from "./appreciate/index";
+import HandlePage from "./handlePage/index";
+import Author from "./author/index";
 export default {
   data() {
     return {
@@ -38,7 +42,9 @@ export default {
     Tips,
     Synopsis,
     RecordList,
-    Appreciate
+    Appreciate,
+    HandlePage,
+    Author,
   }
 };
 </script>
