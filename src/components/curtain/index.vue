@@ -1,8 +1,8 @@
 <template>
-  <div class="curtain-wrap">
+  <div class="curtain-wrap showCurtain">
     <div class="infoWrap">
       <p class="title">title</p>
-      <div class="line"></div>
+      <div class="line curtainLine"></div>
       <div class="info">
         <span class="avatar"></span>
         <span class="author">author</span>

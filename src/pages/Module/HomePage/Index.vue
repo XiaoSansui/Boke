@@ -2,7 +2,7 @@
   <div>
     <MaskInfo/>
     <Music/>
-    <div class="top">
+    <div class="top showHomePage">
       <div class="mask"></div>
     </div>
     <div class="middle">
