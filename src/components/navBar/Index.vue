@@ -101,7 +101,7 @@ export default {
         if (scroll_top < 300) {
           btn.style.transform = "translateY(50vh)";
           navBar.style.cssText =
-            "transform:translateY(0); background: rgba(255, 255, 255, 0);color: rgba(255, 255, 255, 0.9);border-bottom: 1px solid rgba(255, 255, 255, 0);";
+            "transform:translateY(0); background: rgba(255, 255, 255, 0);color: rgba(0, 0, 0, 0.9);border-bottom: 1px solid rgba(255, 255, 255, 0);";
           navBar.onmouseenter=this.navWrapShow;
           navBar.onmouseleave=this.navWrapHide;
         } else {
@@ -109,7 +109,7 @@ export default {
           navBar.onmouseleave=false;
           btn.style.transform = "translateY(0)";
           navBar.style.cssText =
-            "transform:translateY(-20vh); background: rgba(255, 255, 255, 1);color: rgba(51, 51, 51, 0.9);border-bottom: 1px solid #d4d4d4;";
+            "transform:translateY(-20vh); background: rgba(255, 255, 255, 1);color: rgba(0, 0, 0, 0.9);border-bottom: 1px solid #d4d4d4;";
           if (this.scrolltop) {
             console.log("123");
             navBar.style.cssText =
