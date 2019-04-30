@@ -1,7 +1,13 @@
 <template>
   <div class="focusingWrap">
     <p class="title">
-      <span>icon</span>聚焦
+        <span>
+        <span class="svg-container">
+          <svg class="icon icon-title" aria-hidden="true">
+            <use xlink:href="#icon-ziyuan6"></use>
+          </svg>
+        </span>
+      </span>聚焦
     </p>
     <ul>
       <li>

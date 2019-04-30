@@ -1,13 +1,35 @@
 <template>
   <div class="navBarWrap">
-    <div ref="navBar" class="navWrap" @mouseenter="navWrapShow" @mouseleave="navWrapHide">
+    <div ref="navBar" class="navWrap 123" @mouseenter="navWrapShow" @mouseleave="navWrapHide">
       <div class="avatar" @click="jumpPage('page-homepage')">
         <img src="/static/image/bg-53.jpg" alt="avatar">
       </div>
       <div class="barList">
-        <div>me</div>
-        <div>search</div>
-        <div @click="handleMenu">menu</div>
+        <div>
+          <span>
+        <span class="svg-container">
+          <svg class="icon icon-nav" aria-hidden="true">
+            <use xlink:href="#icon-ziyuan15"></use>
+          </svg>
+        </span>
+      </span>
+        </div>
+        <div>
+          <span>
+        <span class="svg-container">
+          <svg class="icon icon-nav" aria-hidden="true">
+            <use xlink:href="#icon-ziyuan23"></use>
+          </svg>
+        </span>
+      </span>
+        </div>
+        <div @click="handleMenu"> <span>
+        <span class="svg-container">
+          <svg class="icon icon-nav" aria-hidden="true">
+            <use xlink:href="#icon-ziyuan19"></use>
+          </svg>
+        </span>
+      </span></div>
         <ul class="menuList" :class="menuStatus?'menuListShow':'menuListHide'">
           <li @click="jumpPage('page-video')">视频</li>
           <li>聚焦</li>
@@ -73,12 +95,12 @@ export default {
     navWrapShow() {
       let navBar = this.$refs.navBar;
       navBar.style.cssText =
-        "background: rgba(255, 255, 255, 1);color: rgba(0, 0, 0, 0.9);border-bottom: 1px solid #d4d4d4;";
+        "background: rgba(255, 255, 255, 1);border-bottom: 1px solid #d4d4d4;";
     },
     navWrapHide() {
       let navBar = this.$refs.navBar;
       navBar.style.cssText =
-        "background: rgba(255, 255, 255, 0);color: rgba(0, 0, 0,  0.548);border-bottom: 1px solid rgba(0, 0, 0, 0)";
+        "background: rgba(255, 255, 255, 0);border-bottom: 1px solid rgba(0, 0, 0, 0)";
     },
     showNavBar(delta) {
       if (delta < 0) {
@@ -99,21 +121,17 @@ export default {
           document.documentElement.scrollTop || document.body.scrollTop;
         let scrollheight = document.body.scrollHeight; //页高
         if (scroll_top < 300) {
+          //未超过300
           btn.style.transform = "translateY(50vh)";
           navBar.style.cssText =
-            "transform:translateY(0); background: rgba(255, 255, 255, 0);color: rgba(0, 0, 0, 0.9);border-bottom: 1px solid rgba(255, 255, 255, 0);";
-          navBar.onmouseenter=this.navWrapShow;
-          navBar.onmouseleave=this.navWrapHide;
+            "transform:translateY(0);background: rgba(255, 255, 255, 0);border-bottom: 1px solid rgba(0, 0, 0, 0)";
         } else {
-           navBar.onmouseenter=false;
-          navBar.onmouseleave=false;
           btn.style.transform = "translateY(0)";
           navBar.style.cssText =
-            "transform:translateY(-20vh); background: rgba(255, 255, 255, 1);color: rgba(0, 0, 0, 0.9);border-bottom: 1px solid #d4d4d4;";
+            "transform:translateY(-20vh);background: rgba(255, 255, 255, 1);border-bottom: 1px solid rgba(0, 0, 0, 0)";
           if (this.scrolltop) {
-            console.log("123");
             navBar.style.cssText =
-              "transform:translateY(0); background: #fff;color: #333;border-bottom: 1px solid #d4d4d4;";
+              "transform:translateY(0);background: rgba(255, 255, 255, 1);border-bottom: 1px solid #d4d4d4;";
           }
         }
         btn.onclick = function() {
@@ -123,7 +141,6 @@ export default {
               let speed = (0 - scroll_top) / 10;
               speed = speed > 0 ? Math.ceil(speed) : Math.floor(speed);
               scroll_top = scroll_top + speed;
-              console.log(scroll_top);
               document.documentElement.scrollTop = scroll_top;
               if (scroll_top <= 0) {
                 clearInterval(timer);

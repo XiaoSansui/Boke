@@ -1,3 +1,4 @@
+
 .title {
   font-size: 20px;
   color: #333;
@@ -14,16 +15,21 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding: 2em;
+    padding: 2em 2em 1em 2em;
     border: 1px solid #c5c5c5;
     border-radius: 10px;
     margin-bottom: 1em;
     transition: box-shadow 0.3s;
+    cursor: pointer;
+    overflow: hidden;
     &:nth-child(even) {
       flex-direction: row-reverse;
       .preview {
         margin-left: 0;
         margin-right: 1em;
+      }
+      .more{
+        text-align: right;
       }
     }
     &:hover {
@@ -39,6 +45,11 @@
       display: flex;
       flex-direction: column;
       justify-content: space-between;
+      color: #666;
+      p{
+      font-size: 14px;
+      white-space: nowrap;
+      }
       .infoTitle {
         margin-bottom: 5px;
         width: 90%;
@@ -51,27 +62,26 @@
       }
       .time {
         margin-bottom: 5px;
+        span{
         font-size: 14px;
-        color: #666;
+        }
       }
       .infoStatus {
         margin-bottom: 1em;
-        width: 100%;
+        width: 80%;
         font-size: 14px;
-        color: #666;
         display: flex;
         flex-direction: row;
-        justify-content: flex-start;
+        justify-content: space-between;
         align-items: center;
         p {
           margin-right: 1em;
         }
       }
       .explain {
-        margin-bottom: 1em;
+        margin-bottom: 0.5em;
         width: 90%;
         font-size: 16px;
-        color: #666;
         line-height: 1.3em;
         word-wrap: break-word;
         overflow: hidden;
