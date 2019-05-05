@@ -14,6 +14,14 @@
   animation: goTopBtn .6s ease both;
 }
 
+.ShowMenuList {
+  animation: ShowMenuList .6s ease both;
+}
+
+.hideMenuList {
+  animation: hideMenuList .6s ease both;
+}
+
 @keyframes showHomePage {
   from {
     transform: translateY(-10vh);
@@ -64,13 +72,49 @@
   60% {
     transform: scaleX(1.2) scaleY(0.8);
   }
+
   80% {
     transform: scaleX(0.9) scaleY(1.1);
   }
+
   90% {
     transform: scaleX(1.1) scaleY(0.9);
   }
+
   100% {
     transform: scaleX(1) scaleY(1);
+  }
+}
+
+@keyframes ShowMenuList {
+  from {
+    display: none;
+    transform: translateX(50px);
+    opacity: 0;
+    z-index: -1;
+  }
+
+  to {
+    display: inline-block;
+    transform: translateX(0);
+    opacity: 1;
+    z-index: 1;
+  }
+}
+
+@keyframes hideMenuList {
+  from {
+    display: inline-block;
+    transform: translateX(0);
+    opacity: 1;
+    z-index: 1;
+  }
+
+  to {
+    display: none;
+    transform: translateX(50px);
+    opacity: 0;
+    z-index: -1;
+    
   }
 }

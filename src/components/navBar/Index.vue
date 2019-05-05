@@ -7,30 +7,17 @@
       <div class="barList">
         <div>
           <span>
-        <span class="svg-container">
-          <svg class="icon icon-nav" aria-hidden="true">
-            <use xlink:href="#icon-ziyuan15"></use>
-          </svg>
-        </span>
-      </span>
+            <span class="svg-container">
+              <svg class="icon icon-nav" aria-hidden="true">
+                <use xlink:href="#icon-ziyuan15"></use>
+              </svg>
+            </span>
+          </span>
         </div>
-        <div>
-          <span>
-        <span class="svg-container">
-          <svg class="icon icon-nav" aria-hidden="true">
-            <use xlink:href="#icon-ziyuan23"></use>
-          </svg>
-        </span>
-      </span>
-        </div>
-        <div @click="handleMenu"> <span>
-        <span class="svg-container">
-          <svg class="icon icon-nav" aria-hidden="true">
-            <use xlink:href="#icon-ziyuan19"></use>
-          </svg>
-        </span>
-      </span></div>
-        <ul class="menuList" :class="menuStatus?'menuListShow':'menuListHide'">
+         
+        <Serch/>
+        <Menu @menuClick="handleMenu"/>
+        <ul class="menuList">
           <li @click="jumpPage('page-video')">视频</li>
           <li>聚焦</li>
           <li>软件</li>
@@ -52,6 +39,8 @@
 </template>
 
 <script>
+import Menu from "./menu/index";
+import Serch from "./serch/index";
 export default {
   data() {
     return {
@@ -60,9 +49,12 @@ export default {
       navWrapStatus: false
     };
   },
+  components: {
+    Menu,
+    Serch
+  },
   mounted() {
     this.scrollAnimation();
-
     this.mouseScroll();
   },
   methods: {

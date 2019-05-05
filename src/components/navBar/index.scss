@@ -54,26 +54,15 @@
       }
 
       .menuList {
-        margin-right: 1em;
-        transform: translateX(100px) scale(0.5);
-        opacity: 0;
-        transition: 0.5s;
+        line-height: 60px;
+        
         li {
           margin-right: 1em;
           float: left;
           cursor: pointer;
         }
       }
-
-      .menuListShow {
-        transform: translateX(0) scale(1);
-        opacity: 1;
-      }
-
-      .menuListHide {
-        transform: translateX(100px) scale(0.5);
-        opacity: 0;
-      }
+      
     }
   }
   .navWrapShow {

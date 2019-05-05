@@ -5,3 +5,16 @@
   fill: currentColor;
   overflow: hidden;
 }
+.icon-title{
+  font-size:25px;
+  vertical-align:text-bottom;
+  margin-right:3px;
+}
+.icon-nav{
+  font-size:30px;
+}
+.icon-posts{
+  font-size:16px;
+  margin-right:2px;
+  vertical-align: bottom;
+}

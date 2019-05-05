@@ -7,7 +7,7 @@
         @animationend.stop="$emit('controlEnd','controlEnd')"
       >
         <!-- <i class="iconfont icon-xunhuanbofang"></i> -->
-        <audio ref="music" :src="musicList[musicIndex]">您的浏览器不支持 audio 标签。</audio>
+        <audio ref="music" :src="musicList[musicIndex]||''">您的浏览器不支持 audio 标签。</audio>
         <div class="playControl">
           <i @click="handlePrev" class="iconfont icon-shangyishou"></i>
           <i @click="handlePlay" class="iconfont" :class="playPause?'icon-zanting':'icon-bofang'"></i>
@@ -168,8 +168,6 @@ export default {
       music: null, //音乐播放器
       musicList: [
         //歌曲列表
-        "/static/可乐.mp3",
-        "/static/岁月神偷.mp3",
         "/static/飞云之下.mp3"
       ],
       musicIndex: 0, //当前播放歌曲下标
