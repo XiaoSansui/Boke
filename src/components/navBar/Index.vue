@@ -1,40 +1,40 @@
 <template>
   <div class="navBarWrap">
-    <div ref="navBar" class="navWrap 123" @mouseenter="navWrapShow" @mouseleave="navWrapHide">
+    <div ref="navBar" class="navWrap" :class="showMenu?'navWrapShow':'navWrapHide'">
       <div class="avatar" @click="jumpPage('page-homepage')">
-        <img src="/static/image/bg-53.jpg" alt="avatar">
+        <img src="../../../static/image/bg-53.jpg" alt="avatar">
       </div>
       <div class="barList">
         <div>
           <span>
             <span class="svg-container">
               <svg class="icon icon-nav" aria-hidden="true">
-                <use xlink:href="#icon-ziyuan15"></use>
+                <use xlink:href="#icon-me"></use>
               </svg>
             </span>
           </span>
         </div>
-         
-        <Serch/>
-        <Menu @menuClick="handleMenu"/>
-        <ul class="menuList">
-          <li @click="jumpPage('page-video')">视频</li>
-          <li>聚焦</li>
-          <li>软件</li>
-          <li>文章</li>
-          <li>美句</li>
-          <li>创意工坊</li>
-        </ul>
+        <div @click="handleSerchWrap">
+          <span>
+            <span class="svg-container">
+              <svg class="icon icon-nav" aria-hidden="true">
+                <use xlink:href="#icon-sousuo2"></use>
+              </svg>
+            </span>
+          </span>
+        </div>
+        <Menu @handleMenu="handleMenu"/>
       </div>
     </div>
     <img
-      src="/static/image/gotop.png"
+      src="../../../static/image/gotop.png"
       alt
       ref="goTop"
       @mouseenter="(e)=>{e.target.classList.add('goTopBtn')}"
       @mouseleave="(e)=>{e.target.classList.remove('goTopBtn')}"
       class="goTop"
     >
+    <Serch :showSerchWrap="showSerchWrap" @closeWrap="handleSerchWrap"/>
   </div>
 </template>
 
@@ -46,7 +46,9 @@ export default {
     return {
       menuStatus: false,
       scrolltop: false,
-      navWrapStatus: false
+      navWrapStatus: false,
+      showSerchWrap: false,
+      showMenu: false
     };
   },
   components: {
@@ -84,15 +86,11 @@ export default {
         this.showNavBar(delta);
       }
     },
-    navWrapShow() {
-      let navBar = this.$refs.navBar;
-      navBar.style.cssText =
-        "background: rgba(255, 255, 255, 1);border-bottom: 1px solid #d4d4d4;";
+    handleMenu() {
+      this.showMenu = !this.showMenu;
     },
-    navWrapHide() {
-      let navBar = this.$refs.navBar;
-      navBar.style.cssText =
-        "background: rgba(255, 255, 255, 0);border-bottom: 1px solid rgba(0, 0, 0, 0)";
+    handleSerchWrap() {
+      this.showSerchWrap = !this.showSerchWrap;
     },
     showNavBar(delta) {
       if (delta < 0) {
@@ -103,6 +101,13 @@ export default {
         this.scrolltop = true;
       }
     },
+    //页面跳转
+    jumpPage(name) {
+      this.$router.push({
+        name: name,
+        params: {}
+      });
+    },
     //回到顶部事件 / 隐藏头部导航
     scrollAnimation() {
       let btn = this.$refs.goTop;
@@ -111,19 +116,19 @@ export default {
       window.onscroll = () => {
         let scroll_top =
           document.documentElement.scrollTop || document.body.scrollTop;
-        let scrollheight = document.body.scrollHeight; //页高
+        // let scrollheight = document.body.scrollHeight; //页高
         if (scroll_top < 300) {
           //未超过300
           btn.style.transform = "translateY(50vh)";
-          navBar.style.cssText =
-            "transform:translateY(0);background: rgba(255, 255, 255, 0);border-bottom: 1px solid rgba(0, 0, 0, 0)";
+          navBar.classList.remove("showNav");
+          navBar.classList.remove("hideNav");
         } else {
           btn.style.transform = "translateY(0)";
-          navBar.style.cssText =
-            "transform:translateY(-20vh);background: rgba(255, 255, 255, 1);border-bottom: 1px solid rgba(0, 0, 0, 0)";
+          navBar.classList.remove("showNav");
+          navBar.classList.add("hideNav");
           if (this.scrolltop) {
-            navBar.style.cssText =
-              "transform:translateY(0);background: rgba(255, 255, 255, 1);border-bottom: 1px solid #d4d4d4;";
+            navBar.classList.remove("hideNav");
+            navBar.classList.add("showNav");
           }
         }
         btn.onclick = function() {
@@ -141,25 +146,6 @@ export default {
           }
         };
       };
-    },
-
-    //控制menu显示
-    handleMenu() {
-      this.menuStatus = !this.menuStatus;
-      // this.$set(this, "menuStatus", !this.menuStatus);
-      console.log(this.menuStatus);
-    },
-    //控制menu显示
-    handlenavWrap() {
-      this.navWrapStatus = !this.navWrapStatus;
-    },
-    //页面跳转
-    jumpPage(name) {
-      console.log("routename===>", name);
-      this.$router.push({
-        name: name,
-        params: {}
-      });
     }
   }
 };

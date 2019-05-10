@@ -21,11 +21,12 @@ export default {
       this.editorContent = html;
       console.log(html);
     };
+    //初始化编辑器
     editor.create();
   },
   methods: {
-    // getContent: function () {
-    //     alert(this.editorContent)
+    // getContent() {
+    //   console.log(this.editorContent);
     // }
   }
 };

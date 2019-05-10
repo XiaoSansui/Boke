@@ -3,8 +3,9 @@ import Router from 'vue-router'
 Vue.use(Router)
 
 const Pages = {
-  Index: () => import('../pages/Module/HomePage/Index'),
-  Video: () => import('../pages/Module/Video/Index'),
+  Index: () => import('../pages/Module/HomePage/Index.vue'),
+  Video: () => import('../pages/Module/Video/index.vue'),
+  Markdown: () => import('../components/markdown/index.vue'),
 }
 
 export default new Router({
@@ -22,6 +23,11 @@ export default new Router({
       path: '/video',
       name: 'page-video',
       component: Pages.Video
-    }
+    },
+    {
+      path: '/markdown',
+      name: 'markdown',
+      component: Pages.Markdown
+    },
   ]
 })

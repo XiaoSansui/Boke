@@ -1,7 +1,7 @@
 <template>
   <div class="authorWrap">
     <div class="avatarWrap">
-      <img src="/static/image/bg-53.jpg" alt="">
+      <img src="../../../../static/image/bg-53.jpg" alt="">
     </div>
     <p class="authorName">name</p>
     <div class="motto">

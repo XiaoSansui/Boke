@@ -147,7 +147,7 @@
             </div>
           </div>
           <div class="cover" @click="showCover">
-            <img src="/static/image/cz.png" ref="phonograph" class="phonograph">
+            <img src="../../../static/image/cz.png" ref="phonograph" class="phonograph">
             <div class="innerWrap" ref="coverWrap">
               <img
                 ref="coverImg"

@@ -18,9 +18,4 @@ yarn-error.log*
 *.ntvs*
 *.njsproj
 *.sln
-*.sw*
-yarn.lock
-src/env.js
-src/env.js
-src/env_example.js
-static/Neditor-next-master
+*.sw?

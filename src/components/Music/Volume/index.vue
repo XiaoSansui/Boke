@@ -11,7 +11,6 @@
   </div>
 </template>
 <script>
-import { debug } from "util";
 export default {
   props: ["music"],
   data() {

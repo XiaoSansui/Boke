@@ -7,12 +7,12 @@
       <div class="QRCode">
         <div class="qrwrap">
           <span class="zdb-icon">icon</span>
-          <img src="/static/image/bg-62.jpg" alt>
+          <img src="../../../../static/image/bg-62.jpg" alt>
           <p>支付宝</p>
         </div>
         <div class="qrwrap">
           <span class="wx-icon">icon</span>
-          <img src="/static/image/bg-62.jpg" alt>
+          <img src="../../../../static/image/bg-62.jpg" alt>
           <p>微信</p>
         </div>
       </div>

@@ -15,10 +15,10 @@
 </template>
 
 <script>
-import Notice from "@/components/notice";
-import MaskInfo from "@/components/maskInfo";
-import Focusing from "@/components/focusing";
-import Posts from "@/components/posts";
+import Notice from "@/components/notice/index";
+import MaskInfo from "@/components/maskInfo/Index";
+import Focusing from "@/components/focusing/index";
+import Posts from "@/components/posts/index";
 import Music from "@/components/Music/music";
 export default {
   data() {

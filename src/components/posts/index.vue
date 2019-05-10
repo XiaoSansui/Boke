@@ -57,7 +57,7 @@
           </p>
         </div>
         <div class="preview">
-          <img src="/static/image/bg-62.jpg" alt>
+          <img src="../../../static/image/bg-62.jpg" alt>
         </div>
       </li>
       <li>
@@ -107,13 +107,13 @@
           </p>
         </div>
         <div class="preview">
-          <img src="/static/image/bg-62.jpg" alt>
+          <img src="../../../static/image/bg-62.jpg" alt>
         </div>
       </li>
     </ul>
     <div class="loading">
       <i class="line"></i>
-      <img src="/static/image/postload.gif" alt>
+      <img src="../../../static/image/postload.gif" alt>
       <p>qewqewqe</p>
     </div>
   </div>

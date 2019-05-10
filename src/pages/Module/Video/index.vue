@@ -7,9 +7,9 @@
 </template>
 
 <script>
-import Curtain from "@/components/curtain/index";
-import Article from "@/components/article/index";
-import Editor from "@/components/editor/index";
+import Curtain from "../../../components/curtain/index";
+import Article from "../../../components/article/index";
+import Editor from "../../../components/editor/index";
 export default {
   components: {
     Curtain,

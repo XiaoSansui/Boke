@@ -17,5 +17,5 @@ export default {
 
 <style lang='scss'>
 @import "../static/reset.css";
-@import "@/assets/animation.scss";
+@import "./assets/animation.scss";
 </style>

@@ -11,13 +11,13 @@
     </p>
     <ul>
       <li>
-        <img src="/static/image/bg-62.jpg" alt>
+        <img src="../../../static/image/bg-62.jpg" alt>
       </li>
       <li>
-        <img src="/static/image/bg-62.jpg" alt>
+        <img src="../../../static/image/bg-62.jpg" alt>
       </li>
       <li>
-        <img src="/static/image/bg-62.jpg" alt>
+        <img src="../../../static/image/bg-62.jpg" alt>
       </li>
     </ul>
   </div>
