@@ -90,7 +90,7 @@ backup:
   type: git
   message: backup my blog of https://github.com/ShmilyXI/Boke.git
   repository:
-    github: https://github.com/ShmilyXI/Boke.git,backup
+    github: https://github.com/ShmilyXI/Boke.git,hexo
     # coding: https://git.coding.net/hojun/hojun.git,backup
 
 #RSS
