@@ -43,31 +43,31 @@ mashiro_global.ini = new function () {
     if ($('div').hasClass('poem-wrap')) {
       get_poem('#poem', '#info')
     }
-    $(function () {
-      function waveloop1 () {
-        $('#banner_wave_1').css({
-          'left': '-236px'
-        }).animate({
-          'left': '-1233px'
-        }, 25000, 'linear', waveloop1)
-      }
+    // $(function () {
+    //   function waveloop1 () {
+    //     $('#banner_wave_1').css({
+    //       'left': '-236px'
+    //     }).animate({
+    //       'left': '-1233px'
+    //     }, 25000, 'linear', waveloop1)
+    //   }
 
-      function waveloop2 () {
-        $('#banner_wave_2').css({
-          'left': '0px'
-        }).animate({
-          'left': '-1009px'
-        }, 60000, 'linear', waveloop2)
-      }
-      if (screen && screen.width > 860) {
-        waveloop1()
-        waveloop2()
-      }
-      if (navigator.userAgent.indexOf('AppleWebKit') != -1) {
-        $('body').addClass('isWebKit')
-      }
-      hearthstone_deck_iframe()
-    })
+    //   function waveloop2 () {
+    //     $('#banner_wave_2').css({
+    //       'left': '0px'
+    //     }).animate({
+    //       'left': '-1009px'
+    //     }, 60000, 'linear', waveloop2)
+    //   }
+    //   if (screen && screen.width > 860) {
+    //     waveloop1()
+    //     waveloop2()
+    //   }
+    //   if (navigator.userAgent.indexOf('AppleWebKit') != -1) {
+    //     $('body').addClass('isWebKit')
+    //   }
+    //   hearthstone_deck_iframe()
+    // })
   }
   this.pjax = function () {
     pjaxInit()
@@ -424,13 +424,13 @@ scrollBar()
 
 function checkBgImgCookie () {
   var bgurl = getCookie('bgImgSetting')
-  if (!bgurl) {
-    $('#banner_wave_1').removeClass('banner_wave_hide_fit_skin')
-    $('#banner_wave_2').removeClass('banner_wave_hide_fit_skin')
-  } else {
-    $('#banner_wave_1').addClass('banner_wave_hide_fit_skin')
-    $('#banner_wave_2').addClass('banner_wave_hide_fit_skin')
-  }
+  // if (!bgurl) {
+  //   $('#banner_wave_1').removeClass('banner_wave_hide_fit_skin')
+  //   $('#banner_wave_2').removeClass('banner_wave_hide_fit_skin')
+  // } else {
+  //   $('#banner_wave_1').addClass('banner_wave_hide_fit_skin')
+  //   $('#banner_wave_2').addClass('banner_wave_hide_fit_skin')
+  // }
   if (bgurl != '') {
     if (bgurl == 'https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/themebg/sakura.png' || bgurl == 'https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/themebg/plaid.jpg' || bgurl == 'https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/themebg/star.png' || bgurl == 'https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/themebg/point.png' || bgurl == 'https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/themebg/little-monster.png') {
       mashiro_global.variables.skinSecter = true
@@ -477,8 +477,8 @@ $(document).ready(function () {
       $('.blank').css('background-color', 'rgba(255,255,255,1)')
       $('.pattern-center').removeClass('pattern-center').addClass('pattern-center-sakura')
       $('.headertop-bar').removeClass('headertop-bar').addClass('headertop-bar-sakura')
-      $('#banner_wave_1').addClass('banner_wave_hide_fit_skin')
-      $('#banner_wave_2').addClass('banner_wave_hide_fit_skin')
+      // $('#banner_wave_1').addClass('banner_wave_hide_fit_skin')
+      // $('#banner_wave_2').addClass('banner_wave_hide_fit_skin')
       closeSkinMenu()
       setCookie('bgImgSetting', url, 30)
     })
@@ -493,8 +493,8 @@ $(document).ready(function () {
       $('.blank').css('background-color', 'rgba(255,255,255,1)')
       $('.pattern-center').removeClass('pattern-center').addClass('pattern-center-sakura')
       $('.headertop-bar').removeClass('headertop-bar').addClass('headertop-bar-sakura')
-      $('#banner_wave_1').addClass('banner_wave_hide_fit_skin')
-      $('#banner_wave_2').addClass('banner_wave_hide_fit_skin')
+      // $('#banner_wave_1').addClass('banner_wave_hide_fit_skin')
+      // $('#banner_wave_2').addClass('banner_wave_hide_fit_skin')
       closeSkinMenu()
       setCookie('bgImgSetting', url, 30)
     })
@@ -513,8 +513,8 @@ $(document).ready(function () {
     $('.blank').css('background-color', 'rgba(255,255,255,.0)')
     $('.pattern-center-sakura').removeClass('pattern-center-sakura').addClass('pattern-center')
     $('.headertop-bar-sakura').removeClass('headertop-bar-sakura').addClass('headertop-bar')
-    $('#banner_wave_1').removeClass('banner_wave_hide_fit_skin')
-    $('#banner_wave_2').removeClass('banner_wave_hide_fit_skin')
+    // $('#banner_wave_1').removeClass('banner_wave_hide_fit_skin')
+    // $('#banner_wave_2').removeClass('banner_wave_hide_fit_skin')
     closeSkinMenu()
     setCookie('bgImgSetting', '', 30)
   })
@@ -526,8 +526,8 @@ $(document).ready(function () {
     $('#night-mode-cover').css('visibility', 'visible')
     $('.pattern-center').removeClass('pattern-center').addClass('pattern-center-sakura')
     $('.headertop-bar').removeClass('headertop-bar').addClass('headertop-bar-sakura')
-    $('#banner_wave_1').addClass('banner_wave_hide_fit_skin')
-    $('#banner_wave_2').addClass('banner_wave_hide_fit_skin')
+    // $('#banner_wave_1').addClass('banner_wave_hide_fit_skin')
+    // $('#banner_wave_2').addClass('banner_wave_hide_fit_skin')
     closeSkinMenu()
   })
 
@@ -1140,8 +1140,8 @@ var home = location.href,
       $('.focusinfo').css({
         'top': '-999px'
       })
-      $('#banner_wave_1').addClass('banner_wave_hide')
-      $('#banner_wave_2').addClass('banner_wave_hide')
+      // $('#banner_wave_1').addClass('banner_wave_hide')
+      // $('#banner_wave_2').addClass('banner_wave_hide')
             // for (var i = 0; i < ap.length; i++) {
             //     try {
             //         ap[i].destroy()
@@ -1156,8 +1156,8 @@ var home = location.href,
       $('.focusinfo').css({
         'top': '49.3%'
       })
-      $('#banner_wave_1').removeClass('banner_wave_hide')
-      $('#banner_wave_2').removeClass('banner_wave_hide')
+      // $('#banner_wave_1').removeClass('banner_wave_hide')
+      // $('#banner_wave_2').removeClass('banner_wave_hide')
       s.pause()
     }, liveplay: function () {
       if (s.oncanplay != undefined && $('.haslive').length > 0) {
