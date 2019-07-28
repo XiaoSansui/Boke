@@ -4,10 +4,10 @@ siteName: XY
 # favicon and site master avatar
 favicon: /images/favicon.ico
 avatar: /img/custom/avatar.jpg
-url: https://sakura.hojun.cn
+url: https://github.com/ShmilyXI
 description: 不惧将来  不畏过往  不负昨夕  不待明日
-cdn: https://cdn.jsdelivr.net/gh/honjun/cdn@1.6
-pjax: 0
+cdn: https://cdn.jsdelivr.net/gh/ShmilyXI/CDN@v1.0.4
+pjaxbackground/: 0
 # 1开启
 mathjax: 0
 
@@ -20,23 +20,26 @@ menus:
     技术: {path: /categories/技术/, fa: fa-code }, 
     生活: {path: /categories/生活/, fa: fa-file-text-o }, 
     资源: {path: /categories/资源/, fa: fa-cloud-download }, 
-    随想: {path: /categories/随想/, fa: fa-commenting-o },
     转载: {path: /categories/转载/, fa: fa-book }
+    # 随想: {path: /categories/随想/, fa: fa-commenting-o },
   } }
-  清单: { path: javascript:;, fa: fa-list-ul faa-vertical, submenus: { 
-    书单: {path: /tags/悦读/, fa: fa-th-list faa-bounce }, 
-    番组: {path: /bangumi/, fa: fa-film faa-vertical }, 
+  列表: { path: javascript:;, fa: fa-list-ul faa-vertical, submenus: { 
+    书单: {path: /tags/书单/, fa: fa-th-list faa-bounce }, 
+    图集: {path: /gallery/, fa: fa-photo },
     歌单: {path: /music/, fa: fa-headphones },
-    图集: {path: /tags/图集/, fa: fa-photo }
+    # 番组: {path: /bangumi/, fa: fa-film faa-vertical }, 
   } }
   留言板: { path: /comment/, fa: fa-pencil-square-o faa-tada }
-  友人帐: { path: /links/, fa: fa-link faa-shake }
+  # 友人帐: { path: /links/, fa: fa-link faa-shake }
   赞赏: { path: /donate/, fa: fa-heart faa-pulse }
-  关于: { path: /, fa: fa-leaf faa-wrench , submenus: { 
-    我？: {path: /about/, fa: fa-meetup}, 
-    主题: {path: /theme-sakura/, fa: iconfont icon-sakura },
-    Lab: {path: /lab/, fa: fa-cogs },
-  } }
+  关于: { path: /about/, fa: fa-leaf faa-wrench }
+  Lab: {path: /lab/, fa: fa-cogs }
+  # TODO:关于
+  # 关于: { path: /, fa: fa-leaf faa-wrench , submenus: { 
+  #   我？: {path: /about/, fa: fa-meetup}, 
+  #   主题: {path: /theme-sakura/, fa: iconfont icon-sakura },
+  #   Lab: {path: /lab/, fa: fa-cogs },
+  # } }
   # 客户端: { path: /client/, fa: fa-android faa-vertical }
   # RSS: { path: /atom.xml, fa: fa-rss faa-pulse }
 
@@ -47,17 +50,78 @@ homePageSortType: -1
 homeArticleShown: 10
 # 背景图片 更好的修改
 bg:
-  - https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/cover/(1).jpg.webp
-  - https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/cover/(2).jpg.webp
-  - https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/cover/(3).jpg.webp
-  - https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/cover/(4).jpg.webp
-  - https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/cover/(5).jpg.webp
-  - https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/cover/(6).jpg.webp
-  - https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/cover/(7).jpg.webp
-  - https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/cover/(8).jpg.webp
+  - https://cdn.jsdelivr.net/gh/ShmilyXI/CDN@v1.0.4/img/background/1.jpg
+  - https://cdn.jsdelivr.net/gh/ShmilyXI/CDN@v1.0.4/img/background/2.jpg
+  - https://cdn.jsdelivr.net/gh/ShmilyXI/CDN@v1.0.4/img/background/3.jpg
+  - https://cdn.jsdelivr.net/gh/ShmilyXI/CDN@v1.0.4/img/background/4.jpg
+  - https://cdn.jsdelivr.net/gh/ShmilyXI/CDN@v1.0.4/img/background/5.jpg
+  - https://cdn.jsdelivr.net/gh/ShmilyXI/CDN@v1.0.4/img/background/6.jpg
+  - https://cdn.jsdelivr.net/gh/ShmilyXI/CDN@v1.0.4/img/background/7.jpg
+  - https://cdn.jsdelivr.net/gh/ShmilyXI/CDN@v1.0.4/img/background/8.jpg
+  - https://cdn.jsdelivr.net/gh/ShmilyXI/CDN@v1.0.4/img/background/9.jpg
+  - https://cdn.jsdelivr.net/gh/ShmilyXI/CDN@v1.0.4/img/background/10.jpg
+  - https://cdn.jsdelivr.net/gh/ShmilyXI/CDN@v1.0.4/img/background/11.jpg
+  - https://cdn.jsdelivr.net/gh/ShmilyXI/CDN@v1.0.4/img/background/12.jpg
+  - https://cdn.jsdelivr.net/gh/ShmilyXI/CDN@v1.0.4/img/background/13.jpg
+  - https://cdn.jsdelivr.net/gh/ShmilyXI/CDN@v1.0.4/img/background/14.jpg
+  - https://cdn.jsdelivr.net/gh/ShmilyXI/CDN@v1.0.4/img/background/15.jpg
+  - https://cdn.jsdelivr.net/gh/ShmilyXI/CDN@v1.0.4/img/background/16.jpg
+  - https://cdn.jsdelivr.net/gh/ShmilyXI/CDN@v1.0.4/img/background/17.jpg
+  - https://cdn.jsdelivr.net/gh/ShmilyXI/CDN@v1.0.4/img/background/18.jpg
+  - https://cdn.jsdelivr.net/gh/ShmilyXI/CDN@v1.0.4/img/background/19.jpg
+  - https://cdn.jsdelivr.net/gh/ShmilyXI/CDN@v1.0.4/img/background/20.jpg
+  - https://cdn.jsdelivr.net/gh/ShmilyXI/CDN@v1.0.4/img/background/21.jpg
+  - https://cdn.jsdelivr.net/gh/ShmilyXI/CDN@v1.0.4/img/background/22.jpg
+  - https://cdn.jsdelivr.net/gh/ShmilyXI/CDN@v1.0.4/img/background/23.jpg
+  - https://cdn.jsdelivr.net/gh/ShmilyXI/CDN@v1.0.4/img/background/24.jpg
+  - https://cdn.jsdelivr.net/gh/ShmilyXI/CDN@v1.0.4/img/background/25.jpg
+  - https://cdn.jsdelivr.net/gh/ShmilyXI/CDN@v1.0.4/img/background/26.jpg
+  - https://cdn.jsdelivr.net/gh/ShmilyXI/CDN@v1.0.4/img/background/27.jpg
+  - https://cdn.jsdelivr.net/gh/ShmilyXI/CDN@v1.0.4/img/background/28.jpg
+  - https://cdn.jsdelivr.net/gh/ShmilyXI/CDN@v1.0.4/img/background/29.jpg
+  - https://cdn.jsdelivr.net/gh/ShmilyXI/CDN@v1.0.4/img/background/30.jpg
+  - https://cdn.jsdelivr.net/gh/ShmilyXI/CDN@v1.0.4/img/background/31.jpg
+  - https://cdn.jsdelivr.net/gh/ShmilyXI/CDN@v1.0.4/img/background/32.jpg
+  - https://cdn.jsdelivr.net/gh/ShmilyXI/CDN@v1.0.4/img/background/33.jpg
+  - https://cdn.jsdelivr.net/gh/ShmilyXI/CDN@v1.0.4/img/background/34.jpg
+  - https://cdn.jsdelivr.net/gh/ShmilyXI/CDN@v1.0.4/img/background/35.jpg
+  - https://cdn.jsdelivr.net/gh/ShmilyXI/CDN@v1.0.4/img/background/36.jpg
+  - https://cdn.jsdelivr.net/gh/ShmilyXI/CDN@v1.0.4/img/background/37.jpg
+  - https://cdn.jsdelivr.net/gh/ShmilyXI/CDN@v1.0.4/img/background/38.jpg
+  - https://cdn.jsdelivr.net/gh/ShmilyXI/CDN@v1.0.4/img/background/44.jpg
+  - https://cdn.jsdelivr.net/gh/ShmilyXI/CDN@v1.0.4/img/background/46.jpg
+  - https://cdn.jsdelivr.net/gh/ShmilyXI/CDN@v1.0.4/img/background/47.jpg
+  - https://cdn.jsdelivr.net/gh/ShmilyXI/CDN@v1.0.4/img/background/48.jpg
+  - https://cdn.jsdelivr.net/gh/ShmilyXI/CDN@v1.0.4/img/background/49.jpg
+  - https://cdn.jsdelivr.net/gh/ShmilyXI/CDN@v1.0.4/img/background/52.jpg
+  - https://cdn.jsdelivr.net/gh/ShmilyXI/CDN@v1.0.4/img/background/53.jpg
+  - https://cdn.jsdelivr.net/gh/ShmilyXI/CDN@v1.0.4/img/background/54.jpg
+  - https://cdn.jsdelivr.net/gh/ShmilyXI/CDN@v1.0.4/img/background/55.jpg
+  - https://cdn.jsdelivr.net/gh/ShmilyXI/CDN@v1.0.4/img/background/56.jpg
+  - https://cdn.jsdelivr.net/gh/ShmilyXI/CDN@v1.0.4/img/background/57.jpg
+  - https://cdn.jsdelivr.net/gh/ShmilyXI/CDN@v1.0.4/img/background/58.jpg
+  - https://cdn.jsdelivr.net/gh/ShmilyXI/CDN@v1.0.4/img/background/59.jpg
+  - https://cdn.jsdelivr.net/gh/ShmilyXI/CDN@v1.0.4/img/background/60.jpg
+  - https://cdn.jsdelivr.net/gh/ShmilyXI/CDN@v1.0.4/img/background/115.jpg
+  - https://cdn.jsdelivr.net/gh/ShmilyXI/CDN@v1.0.4/img/background/119 (2).jpg
+  - https://cdn.jsdelivr.net/gh/ShmilyXI/CDN@v1.0.4/img/background/226.jpg
+  - https://cdn.jsdelivr.net/gh/ShmilyXI/CDN@v1.0.4/img/background/aeolian3_by_wlop-dbztbo1.jpg
+  - https://cdn.jsdelivr.net/gh/ShmilyXI/CDN@v1.0.4/img/background/Mumei wallpaper.jpg
+  - https://cdn.jsdelivr.net/gh/ShmilyXI/CDN@v1.0.4/img/background/Princess PSD file.jpg
+  - https://cdn.jsdelivr.net/gh/ShmilyXI/CDN@v1.0.4/img/background/sacrifice.jpg
+  - https://cdn.jsdelivr.net/gh/ShmilyXI/CDN@v1.0.4/img/background/Wake 2.jpg
+  - https://cdn.jsdelivr.net/gh/ShmilyXI/CDN@v1.0.4/img/background/Wake.jpg
+  - https://cdn.jsdelivr.net/gh/ShmilyXI/CDN@v1.0.4/img/background/10(1).jpg
+  - https://cdn.jsdelivr.net/gh/ShmilyXI/CDN@v1.0.4/img/background/24(1).jpg
+  - https://cdn.jsdelivr.net/gh/ShmilyXI/CDN@v1.0.4/img/background/7s_by_wlop-dc3mnhn .jpg
+  - https://cdn.jsdelivr.net/gh/ShmilyXI/CDN@v1.0.4/img/background/6b8c14f8gy1fpuq755x2zj21b80rkwmn.jpg
+  - https://cdn.jsdelivr.net/gh/ShmilyXI/CDN@v1.0.4/img/background/6b8c14f8gy1fplscnanwqj21b80sc42q.jpg
+  - https://cdn.jsdelivr.net/gh/ShmilyXI/CDN@v1.0.4/img/background/6b8c14f8gy1fpclt60s7oj21b90rwjzt.jpg
+  - https://cdn.jsdelivr.net/gh/ShmilyXI/CDN@v1.0.4/img/background/6b8c14f8gy1fp2zdelaqjj21c70zuq8p.jpg
+  - https://cdn.jsdelivr.net/gh/ShmilyXI/CDN@v1.0.4/img/background/1s_by_wlop-dc1sdan.jpg
 
 # 背景图片样式 空 原图效果 filter-dim 阴影 filter-grid 横条 filter-dot 点点
-bgclass: filter-grid
+bgclass: filter-dim
 
 # startdash url, title, desc img
 # url:链接的跳转地址
@@ -74,23 +138,21 @@ siteBuildingTime: 21/05/2019
 #social  url, img PC端配置
 social:
   github: {url: https://github.com/ShmilyXI, img: /img/social/github.png}
-  sina: {url: http://weibo.com/mashirozx?is_all=1, img: /img/social/sina.png}
-  wangyiyun: {url: http://weibo.com/mashirozx?is_all=1, img: /img/social/wangyiyun.png}
-  zhihu: {url: http://weibo.com/mashirozx?is_all=1, img: /img/social/zhihu.png}
-  email: {url: http://weibo.com/mashirozx?is_all=1, img: /img/social/email.svg}
+  zhihu: {url: https://www.zhihu.com/people/xrj-54/activities, img: /img/social/zhihu.png}
+  bilibili: {url: https://space.bilibili.com/15835744, img: /img/social/bilibili.png}
+  wangyiyun: {url: https://music.163.com/#/user/home?id=338969676, img: /img/social/wangyiyun.png}
+  qq: {url: https://wpa.qq.com/msgrd?v=3&uin=1262260527&site=qq&menu=yes, img: /img/social/qq.png}
   wechat: {url: /#, qrcode: /img/custom/wechat.jpg, img: /img/social/wechat.png}
 
 #social  url, img 移动端配置
 msocial:
-  github: {url: http://github.com/honjun, fa: fa-github, color: 333}
-  weibo: {url: http://weibo.com/mashirozx?is_all=1, fa: fa-weibo, color: dd4b39}
-  qq: {url: https://wpa.qq.com/msgrd?v=3&uin=954655431&site=qq&menu=yes, fa: fa-qq, color: 25c6fe}
+  qq: {url: https://wpa.qq.com/msgrd?v=3&uin=1262260527&site=qq&menu=yes, fa: fa-qq, color: 25c6fe}
+  github: {url: https://github.com/ShmilyXI, fa: fa-github, color: 333}
+  wechat: {url: https://www.zhihu.com/people/xrj-54/activities, fa: fa-wechat, color: 01cf0b}
 
 donate:
-  paypal: https://www.paypal.me/hojuncn
   alipay: /img/custom/donate/AliPayQR.jpg
   wechat: /img/custom/donate/WeChanQR.jpg
-  wechatSQ: /img/custom/donate/WeChanSQ.jpg
 
 # 视频地址为https://cdn.jsdelivr.net/gh/honjun/hojun@1.2/Unbroken.mp4，配置如下
 movies:
@@ -111,7 +173,7 @@ aplayer:
   mutex: true
 
 # Valine
-valine: false
+valine: true
 v_appId: GyC3NzMvd0hT9Yyd2hYIC0MN-gzGzoHsz
 v_appKey: mgOpfzbkHYqU92CV4IDlAUHQ
 

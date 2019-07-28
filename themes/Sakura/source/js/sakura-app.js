@@ -414,7 +414,8 @@ function scrollBar () {
       } else {
         $('#bar').css('background', 'orange')
       }
-      $('.toc-container').css('height', $('.site-content').outerHeight())
+      // TODO：底部高度
+      // $('.toc-container').css('height', $('.site-content').outerHeight())
       $('.skin-menu').removeClass('show')
     })
   }
@@ -1338,7 +1339,7 @@ var home = location.href,
             if (nextHref != undefined) {
               $('#pagination a').attr('href', nextHref)
             } else {
-              $('#pagination').html('<span>很高兴你翻到这里，但是真的没有了...</span>')
+              $('#pagination').html("<span>Sorry, there's no more...</span>")
             }
           }
         })

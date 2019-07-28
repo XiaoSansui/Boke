@@ -4,6 +4,10 @@
     left: 0;
     width: 400px;
 }
+.lab-content{
+    width: 100%;
+    height: 100%;
+}
 #veditor {
     background-image: url(https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/comment-bg.png);
     background-size: contain;
@@ -1415,7 +1419,7 @@ a:hover,a:active {
 .site-top .lower-cantiner {
     position:absolute;
     left:50%;
-    min-width:758.4px;
+    /* min-width:758.4px; */
     pointer-events:none
 }
 .site-top .lower {
@@ -2235,11 +2239,11 @@ h1.page-title.mb- {
 .cd-top {
     position:fixed;
     right:25px;
-    top:-650px;
+    top:-800px;
     z-index:99;
-    width:50px;
-    height:650px;
-    background:url(https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/scroll.png) no-repeat center;
+    width:55px;
+    height:800px;
+    background:url(https://cdn.jsdelivr.net/gh/ShmilyXI/CDN@v1.0.4/img/other/scroll.png) no-repeat center;
     background-size:contain;
     -webkit-transition:all .5s ease-in-out;
     transition:all .5s ease-in-out;
@@ -2558,18 +2562,22 @@ h1.page-title.mb- {
 }
 .author-profile .info {
     overflow:hidden;
-    text-align:center
+    text-align:center;
 }
 .author-profile .profile {
     display:inline-block;
     width:70px;
-    height:70px
+    height:70px;
+    overflow: hidden;
+    border-radius:50%;
 }
 .author-profile .profile img {
-    max-width:100%;
-    border-radius:100%;
+    width:70px;
+    height:70px;
+    border-radius:50%;
     padding:3px;
-    border:1px solid #ddd
+    border:1px solid #ddd;
+    object-fit: cover;
 }
 .author-profile hr {
     width:50%;
@@ -3991,8 +3999,9 @@ li.feature-2 {
 }
 .focusinfo img {
     width:130px;
-    height:auto;
+    height:130px;
     padding:2px;
+    object-fit: cover;
     border-radius:100%
 }
 .focusinfo .header-tou img {
@@ -6691,7 +6700,8 @@ progress {
 .toc-container {
     z-index:98;
     width:200px;
-    height:100%;
+    /* TODO:底部高度 */
+    /* height:100%; */
     background-color:rgba(255,255,255,0);
     transform:translateX(0);
     right:calc((100% - 950px - 250px)/2);

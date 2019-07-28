@@ -10,7 +10,11 @@
       </header>
     </div>
   <% } %>
-  <div id="content" class="site-content">
+  <% if (page.title==="lab"){ %>
+    <div class="lab-content">
+  <% }else{ %>
+    <div id="content" class="site-content">
+  <% } %>
     <article class="post-item post-301 page type-page status-publish has-post-thumbnail hentry">
       <%- post.content %>
       <!-- .entry-content -->
