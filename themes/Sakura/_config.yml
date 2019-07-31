@@ -1,12 +1,12 @@
 # site name
-prefixName: Shmily
-siteName: XY
+prefixName: PRAIRIAL
+siteName: 廿一
 # favicon and site master avatar
 favicon: /images/favicon.ico
-avatar: /img/custom/avatar.jpg
+avatar: /img/custom/avatar.jpeg
 url: https://github.com/ShmilyXI
 description: 不惧将来  不畏过往  不负昨夕  不待明日
-cdn: https://cdn.jsdelivr.net/gh/ShmilyXI/CDN@v1.0.6
+cdn: https://cdn.jsdelivr.net/gh/ShmilyXI/CDN@v1.0.7
 pjaxbackground/: 0
 # 1开启
 mathjax: 0
@@ -50,75 +50,75 @@ homePageSortType: -1
 homeArticleShown: 10
 # 背景图片 更好的修改
 bg:
-  - https://cdn.jsdelivr.net/gh/ShmilyXI/CDN@v1.0.6/img/background/1.jpg
-  - https://cdn.jsdelivr.net/gh/ShmilyXI/CDN@v1.0.6/img/background/2.jpg
-  - https://cdn.jsdelivr.net/gh/ShmilyXI/CDN@v1.0.6/img/background/3.jpg
-  - https://cdn.jsdelivr.net/gh/ShmilyXI/CDN@v1.0.6/img/background/4.jpg
-  - https://cdn.jsdelivr.net/gh/ShmilyXI/CDN@v1.0.6/img/background/5.jpg
-  - https://cdn.jsdelivr.net/gh/ShmilyXI/CDN@v1.0.6/img/background/6.jpg
-  - https://cdn.jsdelivr.net/gh/ShmilyXI/CDN@v1.0.6/img/background/7.jpg
-  - https://cdn.jsdelivr.net/gh/ShmilyXI/CDN@v1.0.6/img/background/8.jpg
-  - https://cdn.jsdelivr.net/gh/ShmilyXI/CDN@v1.0.6/img/background/9.jpg
-  - https://cdn.jsdelivr.net/gh/ShmilyXI/CDN@v1.0.6/img/background/10.jpg
-  - https://cdn.jsdelivr.net/gh/ShmilyXI/CDN@v1.0.6/img/background/11.jpg
-  - https://cdn.jsdelivr.net/gh/ShmilyXI/CDN@v1.0.6/img/background/12.jpg
-  - https://cdn.jsdelivr.net/gh/ShmilyXI/CDN@v1.0.6/img/background/13.jpg
-  - https://cdn.jsdelivr.net/gh/ShmilyXI/CDN@v1.0.6/img/background/14.jpg
-  - https://cdn.jsdelivr.net/gh/ShmilyXI/CDN@v1.0.6/img/background/15.jpg
-  - https://cdn.jsdelivr.net/gh/ShmilyXI/CDN@v1.0.6/img/background/16.jpg
-  - https://cdn.jsdelivr.net/gh/ShmilyXI/CDN@v1.0.6/img/background/17.jpg
-  - https://cdn.jsdelivr.net/gh/ShmilyXI/CDN@v1.0.6/img/background/18.jpg
-  - https://cdn.jsdelivr.net/gh/ShmilyXI/CDN@v1.0.6/img/background/19.jpg
-  - https://cdn.jsdelivr.net/gh/ShmilyXI/CDN@v1.0.6/img/background/20.jpg
-  - https://cdn.jsdelivr.net/gh/ShmilyXI/CDN@v1.0.6/img/background/21.jpg
-  - https://cdn.jsdelivr.net/gh/ShmilyXI/CDN@v1.0.6/img/background/22.jpg
-  - https://cdn.jsdelivr.net/gh/ShmilyXI/CDN@v1.0.6/img/background/23.jpg
-  - https://cdn.jsdelivr.net/gh/ShmilyXI/CDN@v1.0.6/img/background/24.jpg
-  - https://cdn.jsdelivr.net/gh/ShmilyXI/CDN@v1.0.6/img/background/25.jpg
-  - https://cdn.jsdelivr.net/gh/ShmilyXI/CDN@v1.0.6/img/background/26.jpg
-  - https://cdn.jsdelivr.net/gh/ShmilyXI/CDN@v1.0.6/img/background/27.jpg
-  - https://cdn.jsdelivr.net/gh/ShmilyXI/CDN@v1.0.6/img/background/28.jpg
-  - https://cdn.jsdelivr.net/gh/ShmilyXI/CDN@v1.0.6/img/background/29.jpg
-  - https://cdn.jsdelivr.net/gh/ShmilyXI/CDN@v1.0.6/img/background/30.jpg
-  - https://cdn.jsdelivr.net/gh/ShmilyXI/CDN@v1.0.6/img/background/31.jpg
-  - https://cdn.jsdelivr.net/gh/ShmilyXI/CDN@v1.0.6/img/background/32.jpg
-  - https://cdn.jsdelivr.net/gh/ShmilyXI/CDN@v1.0.6/img/background/33.jpg
-  - https://cdn.jsdelivr.net/gh/ShmilyXI/CDN@v1.0.6/img/background/34.jpg
-  - https://cdn.jsdelivr.net/gh/ShmilyXI/CDN@v1.0.6/img/background/35.jpg
-  - https://cdn.jsdelivr.net/gh/ShmilyXI/CDN@v1.0.6/img/background/36.jpg
-  - https://cdn.jsdelivr.net/gh/ShmilyXI/CDN@v1.0.6/img/background/37.jpg
-  - https://cdn.jsdelivr.net/gh/ShmilyXI/CDN@v1.0.6/img/background/38.jpg
-  - https://cdn.jsdelivr.net/gh/ShmilyXI/CDN@v1.0.6/img/background/44.jpg
-  - https://cdn.jsdelivr.net/gh/ShmilyXI/CDN@v1.0.6/img/background/46.jpg
-  - https://cdn.jsdelivr.net/gh/ShmilyXI/CDN@v1.0.6/img/background/47.jpg
-  - https://cdn.jsdelivr.net/gh/ShmilyXI/CDN@v1.0.6/img/background/48.jpg
-  - https://cdn.jsdelivr.net/gh/ShmilyXI/CDN@v1.0.6/img/background/49.jpg
-  - https://cdn.jsdelivr.net/gh/ShmilyXI/CDN@v1.0.6/img/background/52.jpg
-  - https://cdn.jsdelivr.net/gh/ShmilyXI/CDN@v1.0.6/img/background/53.jpg
-  - https://cdn.jsdelivr.net/gh/ShmilyXI/CDN@v1.0.6/img/background/54.jpg
-  - https://cdn.jsdelivr.net/gh/ShmilyXI/CDN@v1.0.6/img/background/55.jpg
-  - https://cdn.jsdelivr.net/gh/ShmilyXI/CDN@v1.0.6/img/background/56.jpg
-  - https://cdn.jsdelivr.net/gh/ShmilyXI/CDN@v1.0.6/img/background/57.jpg
-  - https://cdn.jsdelivr.net/gh/ShmilyXI/CDN@v1.0.6/img/background/58.jpg
-  - https://cdn.jsdelivr.net/gh/ShmilyXI/CDN@v1.0.6/img/background/59.jpg
-  - https://cdn.jsdelivr.net/gh/ShmilyXI/CDN@v1.0.6/img/background/60.jpg
-  - https://cdn.jsdelivr.net/gh/ShmilyXI/CDN@v1.0.6/img/background/115.jpg
-  - https://cdn.jsdelivr.net/gh/ShmilyXI/CDN@v1.0.6/img/background/119 (2).jpg
-  - https://cdn.jsdelivr.net/gh/ShmilyXI/CDN@v1.0.6/img/background/226.jpg
-  - https://cdn.jsdelivr.net/gh/ShmilyXI/CDN@v1.0.6/img/background/aeolian3_by_wlop-dbztbo1.jpg
-  - https://cdn.jsdelivr.net/gh/ShmilyXI/CDN@v1.0.6/img/background/Mumei wallpaper.jpg
-  - https://cdn.jsdelivr.net/gh/ShmilyXI/CDN@v1.0.6/img/background/Princess PSD file.jpg
-  - https://cdn.jsdelivr.net/gh/ShmilyXI/CDN@v1.0.6/img/background/sacrifice.jpg
-  - https://cdn.jsdelivr.net/gh/ShmilyXI/CDN@v1.0.6/img/background/Wake 2.jpg
-  - https://cdn.jsdelivr.net/gh/ShmilyXI/CDN@v1.0.6/img/background/Wake.jpg
-  - https://cdn.jsdelivr.net/gh/ShmilyXI/CDN@v1.0.6/img/background/10(1).jpg
-  - https://cdn.jsdelivr.net/gh/ShmilyXI/CDN@v1.0.6/img/background/24(1).jpg
-  - https://cdn.jsdelivr.net/gh/ShmilyXI/CDN@v1.0.6/img/background/7s_by_wlop-dc3mnhn .jpg
-  - https://cdn.jsdelivr.net/gh/ShmilyXI/CDN@v1.0.6/img/background/6b8c14f8gy1fpuq755x2zj21b80rkwmn.jpg
-  - https://cdn.jsdelivr.net/gh/ShmilyXI/CDN@v1.0.6/img/background/6b8c14f8gy1fplscnanwqj21b80sc42q.jpg
-  - https://cdn.jsdelivr.net/gh/ShmilyXI/CDN@v1.0.6/img/background/6b8c14f8gy1fpclt60s7oj21b90rwjzt.jpg
-  - https://cdn.jsdelivr.net/gh/ShmilyXI/CDN@v1.0.6/img/background/6b8c14f8gy1fp2zdelaqjj21c70zuq8p.jpg
-  - https://cdn.jsdelivr.net/gh/ShmilyXI/CDN@v1.0.6/img/background/1s_by_wlop-dc1sdan.jpg
+  - https://cdn.jsdelivr.net/gh/ShmilyXI/CDN@v1.0.7/img/background/1.jpg
+  - https://cdn.jsdelivr.net/gh/ShmilyXI/CDN@v1.0.7/img/background/2.jpg
+  - https://cdn.jsdelivr.net/gh/ShmilyXI/CDN@v1.0.7/img/background/3.jpg
+  - https://cdn.jsdelivr.net/gh/ShmilyXI/CDN@v1.0.7/img/background/4.jpg
+  - https://cdn.jsdelivr.net/gh/ShmilyXI/CDN@v1.0.7/img/background/5.jpg
+  - https://cdn.jsdelivr.net/gh/ShmilyXI/CDN@v1.0.7/img/background/6.jpg
+  - https://cdn.jsdelivr.net/gh/ShmilyXI/CDN@v1.0.7/img/background/7.jpg
+  - https://cdn.jsdelivr.net/gh/ShmilyXI/CDN@v1.0.7/img/background/8.jpg
+  - https://cdn.jsdelivr.net/gh/ShmilyXI/CDN@v1.0.7/img/background/9.jpg
+  - https://cdn.jsdelivr.net/gh/ShmilyXI/CDN@v1.0.7/img/background/10.jpg
+  - https://cdn.jsdelivr.net/gh/ShmilyXI/CDN@v1.0.7/img/background/11.jpg
+  - https://cdn.jsdelivr.net/gh/ShmilyXI/CDN@v1.0.7/img/background/12.jpg
+  - https://cdn.jsdelivr.net/gh/ShmilyXI/CDN@v1.0.7/img/background/13.jpg
+  - https://cdn.jsdelivr.net/gh/ShmilyXI/CDN@v1.0.7/img/background/14.jpg
+  - https://cdn.jsdelivr.net/gh/ShmilyXI/CDN@v1.0.7/img/background/15.jpg
+  - https://cdn.jsdelivr.net/gh/ShmilyXI/CDN@v1.0.7/img/background/16.jpg
+  - https://cdn.jsdelivr.net/gh/ShmilyXI/CDN@v1.0.7/img/background/17.jpg
+  - https://cdn.jsdelivr.net/gh/ShmilyXI/CDN@v1.0.7/img/background/18.jpg
+  - https://cdn.jsdelivr.net/gh/ShmilyXI/CDN@v1.0.7/img/background/19.jpg
+  - https://cdn.jsdelivr.net/gh/ShmilyXI/CDN@v1.0.7/img/background/20.jpg
+  - https://cdn.jsdelivr.net/gh/ShmilyXI/CDN@v1.0.7/img/background/21.jpg
+  - https://cdn.jsdelivr.net/gh/ShmilyXI/CDN@v1.0.7/img/background/22.jpg
+  - https://cdn.jsdelivr.net/gh/ShmilyXI/CDN@v1.0.7/img/background/23.jpg
+  - https://cdn.jsdelivr.net/gh/ShmilyXI/CDN@v1.0.7/img/background/24.jpg
+  - https://cdn.jsdelivr.net/gh/ShmilyXI/CDN@v1.0.7/img/background/25.jpg
+  - https://cdn.jsdelivr.net/gh/ShmilyXI/CDN@v1.0.7/img/background/26.jpg
+  - https://cdn.jsdelivr.net/gh/ShmilyXI/CDN@v1.0.7/img/background/27.jpg
+  - https://cdn.jsdelivr.net/gh/ShmilyXI/CDN@v1.0.7/img/background/28.jpg
+  - https://cdn.jsdelivr.net/gh/ShmilyXI/CDN@v1.0.7/img/background/29.jpg
+  - https://cdn.jsdelivr.net/gh/ShmilyXI/CDN@v1.0.7/img/background/30.jpg
+  - https://cdn.jsdelivr.net/gh/ShmilyXI/CDN@v1.0.7/img/background/31.jpg
+  - https://cdn.jsdelivr.net/gh/ShmilyXI/CDN@v1.0.7/img/background/32.jpg
+  - https://cdn.jsdelivr.net/gh/ShmilyXI/CDN@v1.0.7/img/background/33.jpg
+  - https://cdn.jsdelivr.net/gh/ShmilyXI/CDN@v1.0.7/img/background/34.jpg
+  - https://cdn.jsdelivr.net/gh/ShmilyXI/CDN@v1.0.7/img/background/35.jpg
+  - https://cdn.jsdelivr.net/gh/ShmilyXI/CDN@v1.0.7/img/background/36.jpg
+  - https://cdn.jsdelivr.net/gh/ShmilyXI/CDN@v1.0.7/img/background/37.jpg
+  - https://cdn.jsdelivr.net/gh/ShmilyXI/CDN@v1.0.7/img/background/38.jpg
+  - https://cdn.jsdelivr.net/gh/ShmilyXI/CDN@v1.0.7/img/background/44.jpg
+  - https://cdn.jsdelivr.net/gh/ShmilyXI/CDN@v1.0.7/img/background/46.jpg
+  - https://cdn.jsdelivr.net/gh/ShmilyXI/CDN@v1.0.7/img/background/47.jpg
+  - https://cdn.jsdelivr.net/gh/ShmilyXI/CDN@v1.0.7/img/background/48.jpg
+  - https://cdn.jsdelivr.net/gh/ShmilyXI/CDN@v1.0.7/img/background/49.jpg
+  - https://cdn.jsdelivr.net/gh/ShmilyXI/CDN@v1.0.7/img/background/52.jpg
+  - https://cdn.jsdelivr.net/gh/ShmilyXI/CDN@v1.0.7/img/background/53.jpg
+  - https://cdn.jsdelivr.net/gh/ShmilyXI/CDN@v1.0.7/img/background/54.jpg
+  - https://cdn.jsdelivr.net/gh/ShmilyXI/CDN@v1.0.7/img/background/55.jpg
+  - https://cdn.jsdelivr.net/gh/ShmilyXI/CDN@v1.0.7/img/background/56.jpg
+  - https://cdn.jsdelivr.net/gh/ShmilyXI/CDN@v1.0.7/img/background/57.jpg
+  - https://cdn.jsdelivr.net/gh/ShmilyXI/CDN@v1.0.7/img/background/58.jpg
+  - https://cdn.jsdelivr.net/gh/ShmilyXI/CDN@v1.0.7/img/background/59.jpg
+  - https://cdn.jsdelivr.net/gh/ShmilyXI/CDN@v1.0.7/img/background/60.jpg
+  - https://cdn.jsdelivr.net/gh/ShmilyXI/CDN@v1.0.7/img/background/115.jpg
+  - https://cdn.jsdelivr.net/gh/ShmilyXI/CDN@v1.0.7/img/background/119 (2).jpg
+  - https://cdn.jsdelivr.net/gh/ShmilyXI/CDN@v1.0.7/img/background/226.jpg
+  - https://cdn.jsdelivr.net/gh/ShmilyXI/CDN@v1.0.7/img/background/aeolian3_by_wlop-dbztbo1.jpg
+  - https://cdn.jsdelivr.net/gh/ShmilyXI/CDN@v1.0.7/img/background/Mumei wallpaper.jpg
+  - https://cdn.jsdelivr.net/gh/ShmilyXI/CDN@v1.0.7/img/background/Princess PSD file.jpg
+  - https://cdn.jsdelivr.net/gh/ShmilyXI/CDN@v1.0.7/img/background/sacrifice.jpg
+  - https://cdn.jsdelivr.net/gh/ShmilyXI/CDN@v1.0.7/img/background/Wake 2.jpg
+  - https://cdn.jsdelivr.net/gh/ShmilyXI/CDN@v1.0.7/img/background/Wake.jpg
+  - https://cdn.jsdelivr.net/gh/ShmilyXI/CDN@v1.0.7/img/background/10(1).jpg
+  - https://cdn.jsdelivr.net/gh/ShmilyXI/CDN@v1.0.7/img/background/24(1).jpg
+  - https://cdn.jsdelivr.net/gh/ShmilyXI/CDN@v1.0.7/img/background/7s_by_wlop-dc3mnhn .jpg
+  - https://cdn.jsdelivr.net/gh/ShmilyXI/CDN@v1.0.7/img/background/6b8c14f8gy1fpuq755x2zj21b80rkwmn.jpg
+  - https://cdn.jsdelivr.net/gh/ShmilyXI/CDN@v1.0.7/img/background/6b8c14f8gy1fplscnanwqj21b80sc42q.jpg
+  - https://cdn.jsdelivr.net/gh/ShmilyXI/CDN@v1.0.7/img/background/6b8c14f8gy1fpclt60s7oj21b90rwjzt.jpg
+  - https://cdn.jsdelivr.net/gh/ShmilyXI/CDN@v1.0.7/img/background/6b8c14f8gy1fp2zdelaqjj21c70zuq8p.jpg
+  - https://cdn.jsdelivr.net/gh/ShmilyXI/CDN@v1.0.7/img/background/1s_by_wlop-dc1sdan.jpg
 
 # 背景图片样式 空 原图效果 filter-dim 阴影 filter-grid 横条 filter-dot 点点
 bgclass: filter-dim

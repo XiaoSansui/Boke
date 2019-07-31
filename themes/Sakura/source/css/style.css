@@ -5842,7 +5842,8 @@ button.botui-actions-buttons-button {
     padding-top:5px
 }
 .logolink.moe-mashiro .shironeko {
-    margin-left:-5px
+    margin-left:-5px;
+    font-size: 20px;
 }
 .forgetmenot input[type=checkbox] {
     border:1px solid #b4b9be;
