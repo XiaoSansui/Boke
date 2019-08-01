@@ -153,6 +153,7 @@ msocial:
 donate:
   alipay: /img/custom/donate/AliPayQR.jpg
   wechatSQ: /img/custom/donate/WeChanSQ.png
+  wechat: /img/custom/wechat.png
 
 # 视频地址为https://cdn.jsdelivr.net/gh/honjun/hojun@1.2/Unbroken.mp4，配置如下
 movies:
@@ -161,7 +162,7 @@ movies:
   name: Unbroken.mp4
 
 aplayer: 
-  id: 2660651585
+  id: 474291150
   server: netease
   type: playlist
   fixed: true

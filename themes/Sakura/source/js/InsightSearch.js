@@ -227,6 +227,8 @@
         gotoLink($(this));
     }).on('click', '.ins-close', function () {
         $main.removeClass('show');
+    }).on('click', '.ins-search-mask', function () {
+        $main.removeClass('show');
     }).on('keydown', function (e) {
         if (!$main.hasClass('show')) return;
         switch (e.keyCode) {

@@ -412,7 +412,8 @@ function scrollBar () {
           $('#bar').css('background', '#5aaadb')
         }
       } else {
-        $('#bar').css('background', 'orange')
+        // 文档阅读顶部导航条颜色
+        $('#bar').css('background', 'skyblue')
       }
       // TODO：底部高度
       // $('.toc-container').css('height', $('.site-content').outerHeight())
