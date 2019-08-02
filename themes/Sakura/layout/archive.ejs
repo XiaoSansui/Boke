@@ -16,7 +16,7 @@
           <div class="art-content">
             <div id="archives">
               <p style="text-align:right;">
-                [<span id="al_expand_collapse" style="cursor: s-resize;">
+                [<span id="al_expand_collapse" style="cursor: pointer;">
                 全部展开/收缩</span>
               ]</p>
               <% var lastYear; var lastMonth; %>
@@ -31,11 +31,8 @@
                 <% lastMonth = currentMonth; %>
                 <ul class="al_mon_list">
                   <li class="al_li">
-                    <span class="al_mon" style="cursor: s-resize;">
-                      <%= date(post.date, 'MM') %>月(<span id="post-num">
-                      3</span>
-                    篇文章)</span>
-                    <ul class="al_post_list" style="">
+                    <span class="al_mon" style="cursor: pointer;"><span class="mounth"><%= date(post.date, 'MM') %>月(<span id="post-num">3</span>篇文章)</span></span>
+                    <ul class="al_post_list">
               <% } %>
                       <li>
                         <a href="<%- url_for(post.path) %>">

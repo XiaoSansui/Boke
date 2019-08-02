@@ -2151,7 +2151,8 @@ a:active {
     border-radius: 50%;
     padding: 2px;
     border: 1px solid #dadada;
-    position: relative
+    position: relative;
+    object-fit: cover;
 }
 
 .feature :hover .overlay i {
@@ -8245,11 +8246,11 @@ li>ol {
     position: relative;
     padding: 10px 0;
     display: inline-block;
-    vertical-align: middle
+    vertical-align: middle;
 }
 
 .art .art-content #archives a {
-    color: #000
+    color: #333
 }
 
 .art .art-content #archives a:hover {
@@ -8257,7 +8258,13 @@ li>ol {
 }
 
 .art .art-content #archives .al_year {
-    padding-left: 100px
+    margin-left: 90px;
+    display: inline-block;
+    padding: 2px;
+    border-top: 3px solid #6ecaf5;
+    border-bottom: 3px solid #6ecaf5;
+    border-radius: 5px;
+    color: #999;
 }
 
 .art-content #archives .al_mon_list .al_mon,
@@ -8265,16 +8272,25 @@ li>ol {
     position: relative
 }
 
-.art-content #archives .al_mon_list .al_mon,
-.art-content #archives .al_mon_list span {
-    padding: 0;
-    border-radius: 0;
-    margin: 0;
-    color: #000;
-    background: none;
-    font-weight: normal
+.al_mon .mounth{
+    display: inline-block;
+    font-size: 12px;
+    padding: 5px;
+    border-radius: 10px;
+    background: #6ecaf5;
+    color:#fff;
+    margin-left: 15px;
+    position: relative;
 }
-
+.al_mon .mounth::before{
+    content: "";
+    position: absolute;
+    right: -11px;
+    top: calc(50% - 2px);
+    height: 2px;
+    width: 12px;
+    background: #6ecaf5;
+}
 .art .art-content #archives a {
     font-weight: normal
 }
@@ -8286,7 +8302,7 @@ li>ol {
 .art .art-content .al_mon_list .al_post_list>li:before {
     position: absolute;
     left: 116px;
-    background: #fff;
+    background: #6ecaf5;
     height: 12px;
     width: 12px;
     border-radius: 6px;
@@ -8308,7 +8324,7 @@ li>ol {
 .art-content #archives .al_mon_list .al_mon:before {
     position: absolute;
     left: 113px;
-    background: #fff;
+    background: #6ecaf5;
     height: 18px;
     width: 18px;
     border-radius: 9px;
@@ -8335,27 +8351,33 @@ li>ol {
 .art-content #archives .al_mon {
     display: block
 }
+.art-content #archives .al_mon{
+    display: inline-block;
+}
 
 .art-content #archives .al_mon_list:before {
     max-height: 100%;
     height: 100%;
-    width: 4px;
+    width: 3px;
     background: #6ecaf5;
     position: absolute;
     left: 120px;
     content: "";
-    top: 0
+    top: 0;
+    border-radius: 10px;
 }
 
-.art-content #archives .al_mon_list .al_mon:before,
+/* .art-content #archives .al_mon_list .al_mon:before,
 .art .art-content .al_mon_list .al_post_list>li:before {
     -webkit-box-shadow: 1px 1px 1px #bbb;
     box-shadow: 1px 1px 1px #bbb
-}
+} */
 
 .art-content #archives .al_mon_list .al_mon:after,
 .art .art-content .al_mon_list .al_post_list>li:after {
-    background: #0bf
+    background: #fff;
+    -webkit-box-shadow: 0 0 1px #bbb;
+    box-shadow: 0 0 1px #bbb
 }
 
 .toc-container {

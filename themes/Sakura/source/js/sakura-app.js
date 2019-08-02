@@ -613,15 +613,12 @@ function reload_show_date_time () {
 function timeSeriesReload (flag) {
   if (flag == true) {
     $('#archives span.al_mon').click(function () {
-      $(this).next().slideToggle(400)
+      $(this).next().slideToggle(300)
       return false
     })
     lazyload()
   } else {
     (function () {
-      $('#al_expand_collapse,#archives span.al_mon').css({
-        cursor: 's-resize'
-      })
       $('#archives span.al_mon').each(function () {
         var num = $(this).next().children('li').length
         $(this).children('#post-num').text(num)
@@ -632,21 +629,21 @@ function timeSeriesReload (flag) {
         $al_post_list_f.show()
       })
       $('#archives span.al_mon').click(function () {
-        $(this).next().slideToggle(400)
+        $(this).next().slideToggle(300)
         return false
       })
-      if (document.body.clientWidth > 860) {
-        $('#archives li.al_li').mouseover(function () {
-          $(this).children('.al_post_list').show(400)
-          return false
-        })
-        if (false) {
-          $('#archives li.al_li').mouseout(function () {
-            $(this).children('.al_post_list').hide(400)
-            return false
-          })
-        }
-      }
+      // if (document.body.clientWidth > 860) {
+        // $('#archives li.al_li').mouseover(function () {
+        //   $(this).children('.al_post_list').show(400)
+        //   return false
+        // })
+        // if (false) {
+        //   $('#archives li.al_li').mouseout(function () {
+        //     $(this).children('.al_post_list').hide(400)
+        //     return false
+        //   })
+        // }
+      // }
       var al_expand_collapse_click = 0
       $('#al_expand_collapse').click(function () {
         if (al_expand_collapse_click == 0) {
