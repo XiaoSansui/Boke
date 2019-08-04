@@ -1,3 +1,334 @@
+.resume-content {
+    color: #333;
+    background-color: rgba(0, 0, 0, .05)
+}
+
+.resume-content .header {
+    width: 100vw;
+    height: calc(100vh - 75px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.resume-content .header .container {
+    margin-top: 15vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.resume-content .header .container .info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.resume-content .header .container .info .avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+    box-shadow: 1px 1px 5px #666;
+}
+
+.resume-content .header .container .info .name {
+    font-size: 40px;
+    margin: 10px 0;
+    font-weight: 600;
+
+}
+
+.resume-content .header .container .info .identity {
+    font-size: 21px;
+    font-weight: 400;
+    margin: 10px 0;
+}
+
+.resume-content .header .container .info .synopsis {
+    margin: 0 auto;
+    width: 50vw;
+    text-align: center;
+    font-size: 16px;
+}
+
+.resume-content .header .contact {
+    width: 100%;
+    display: flex;
+    padding: 0 25vw;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    height: 7vh;
+    background-color: rgba(0, 0, 0, .05)
+}
+
+.resume-content .content {
+    height: 100%;
+    position: relative;
+}
+
+.resume-content .content .nav {
+    width: 100%;
+    position: sticky;
+    top: 75px;
+    left: 0;
+    z-index: 9999;
+    height: 5vh;
+    overflow: hidden;
+    background-color: #fff;
+}
+
+.resume-content .content .nav ul {
+    padding: 0;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.resume-content .content .nav ul li {
+    list-style: none;
+    margin: 0 50px;
+    font-size: 18px;
+}
+
+.resume-content .content .container {
+    width: 60vw;
+    margin: 0 auto;
+}
+
+.resume-content .content .container .title {
+    text-align: center;
+}
+
+.resume-content .content>.container .experiences,
+.resume-content .content>.container .resume-skill,
+.resume-content .content>.container .works,
+.resume-content .content>.container .contact{
+    background-color: #fff;
+    padding: 15px;
+    margin-top: 15px;
+    box-shadow: 0 0 3px rgb(218, 218, 218);
+}
+
+.resume-content .content .container .experiences .container {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+}
+
+.resume-content .content .container .experiences .container .job-meta {
+    flex: 1;
+
+}
+
+.resume-content .content .container .experiences .container .job-meta .position {
+    color: #69d2e7;
+    font-size: 19px;
+    font-weight: 400;
+}
+
+.resume-content .content .container .experiences .container .job-meta .time {
+    color: #999;
+    font-size: 14px;
+}
+
+.resume-content .content .container .experiences .container .job-details {
+    flex: 4;
+    position: relative;
+}
+
+.resume-content .content .container .experiences .container .job-details .job-company {
+    font-size: 22px;
+    font-weight: 400;
+}
+
+.resume-content .content .container .experiences .container .job-details .job-desc>p {
+    padding-right: 35px;
+    text-align: left;
+
+}
+
+.resume-content .content .container .experiences .timeline {
+    width: 3px;
+    height: inherit;
+    background: #69d2e7;
+    float: left;
+    margin-left: -28px;
+    margin-right: 28px;
+}
+
+.resume-content .content .container .experiences .container .job-details::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -40px;
+    width: 22px;
+    height: 22px;
+    border-radius: 11px;
+    background-color: #fff;
+    border: 3px solid #69d2e7;
+}
+
+.resume-content .content .container .experiences .container .job-details::after {
+    content: "";
+    position: absolute;
+    top: 5.5px;
+    left: -34.5px;
+    width: 11px;
+    height: 11px;
+    border-radius: 5.5px;
+    background: #69d2e7;
+}
+.resume-content .resume-skill .container ul{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 10px;
+    margin: 0
+}
+.resume-content .resume-skill .container ul li {
+    color: #333;
+    list-style: none;
+    padding: 5px;
+    margin: 3px;
+    border-radius: 5px;
+    border: 1px solid #333;
+    display: inline-block;
+}
+.resume-content .resume-skill .container ul li:hover{
+    cursor: pointer;
+    background-color: #00a7e0;
+    color: #fff;
+    border-color: #fff;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.toggle-container {
+    position: absolute;
+    width: 95px;
+    right: 0;
+    top: 85px;
+    font-weight: 600;
+}
+
+.toggle-checky {
+    background: #6ecaf5;
+    border-radius: 5px;
+    box-shadow: 1px 1px 3px #196f97;
+    padding: 10px;
+    width: 95px;
+    overflow: hidden;
+    transition: 0.3s all ease;
+    position: relative;
+    box-sizing: border-box;
+    cursor: pointer;
+    -webkit-backface-visibility: hidden;
+    -webkit-transform: translate3d(0, 0, 0);
+}
+
+.toggle-checky .toggle-label {
+    font-size: 0.9em;
+    font-family: sans-serif;
+    color: white;
+    position: absolute;
+    top: 12px;
+    left: 17px;
+    transition: 0.3s all ease;
+}
+
+.toggle-checky .toggle-figure {
+    width: 4px;
+    height: 20px;
+    background: white;
+    display: block;
+    float: right;
+    margin-right: 10px;
+    transform: rotate(45deg);
+    box-shadow: 0 0 30px #34694e;
+}
+
+.toggle-checky .toggle-figure:after {
+    width: 4px;
+    height: 12px;
+    background: white;
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    transform: rotate(-90deg);
+    margin-left: -4px;
+    transition: 0.3s all ease;
+}
+
+.toggle-checky.selected,
+.toggle-checky.toggle-blue.selected {
+    background: #f03752;
+    box-shadow: 1px 1px 3px #a12512;
+}
+
+.toggle-checky.selected .toggle-figure:after {
+    height: 20px;
+    margin-left: 0;
+    bottom: 0;
+}
+
+.toggle-checky.toggle-slide-up .toggle-label-selected {
+    transform: translateY(-50px);
+}
+
+.toggle-checky.toggle-slide-up.selected .toggle-label {
+    transform: translateY(-50px);
+}
+
+.toggle-checky.toggle-slide-up.selected .toggle-label.toggle-label-selected {
+    transform: translateY(0);
+}
+
+.noselect {
+
+    -webkit-touch-callout: none;
+    /* iOS Safari */
+
+    -webkit-user-select: none;
+    /* Chrome/Safari/Opera */
+
+    -khtml-user-select: none;
+    /* Konqueror */
+
+    -moz-user-select: none;
+    /* Firefox */
+
+    -ms-user-select: none;
+    /* Internet Explorer/Edge */
+
+    user-select: none;
+    /* Non-prefixed version, currently
+    
+    not supported by any browser */
+
+}
+
+
 .aplayer-container {
     position: absolute;
     bottom: 0;
@@ -1798,7 +2129,7 @@ a:active {
     position: fixed;
     left: 0;
     background: rgba(255, 255, 255, .95);
-    box-shadow: 0 1px 40px -8px rgba(0, 0, 0, .5)
+    /* box-shadow: 0 1px 40px -8px rgba(0, 0, 0, .5) */
 }
 
 .gizle {
@@ -4947,6 +5278,7 @@ li.feature-2 {
         min-height: 280px !important;
     }
 }
+
 @media(max-width:860px) {
     #centerbg {
         height: 300px;
@@ -5013,7 +5345,7 @@ li.feature-2 {
 }
 
 .focusinfo .header-tou img {
-    box-shadow:inset 0 0 6px rgba(0, 0, 0, .8);
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, .8);
     padding: 7px;
     opacity: 1;
     transform: rotate(0deg);
@@ -8272,25 +8604,27 @@ li>ol {
     position: relative
 }
 
-.al_mon .mounth{
+.al_mon .mounth {
     display: inline-block;
-    font-size: 12px;
+    font-size: 14px;
     padding: 5px;
     border-radius: 10px;
     background: #6ecaf5;
-    color:#fff;
-    margin-left: 15px;
+    color: #fff;
+    margin-top: -4px;
     position: relative;
 }
-.al_mon .mounth::before{
+
+.al_mon .mounth::before {
     content: "";
     position: absolute;
-    right: -11px;
+    right: -13px;
     top: calc(50% - 2px);
     height: 2px;
-    width: 12px;
+    width: 15px;
     background: #6ecaf5;
 }
+
 .art .art-content #archives a {
     font-weight: normal
 }
@@ -8351,7 +8685,8 @@ li>ol {
 .art-content #archives .al_mon {
     display: block
 }
-.art-content #archives .al_mon{
+
+.art-content #archives .al_mon {
     display: inline-block;
 }
 

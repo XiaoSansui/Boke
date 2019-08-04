@@ -644,14 +644,15 @@ function timeSeriesReload (flag) {
         //   })
         // }
       // }
-      var al_expand_collapse_click = 0
-      $('#al_expand_collapse').click(function () {
-        if (al_expand_collapse_click == 0) {
-          $al_post_list.show()
-          al_expand_collapse_click++
-        } else if (al_expand_collapse_click == 1) {
+      var toggle_checky_click = false
+      $('.toggle-checky').click(function () {
+        $(this).toggleClass('selected'); 
+        if (!toggle_checky_click) {
+          $al_post_list.show();
+          toggle_checky_click=!toggle_checky_click
+        } else if (toggle_checky_click) {
           $al_post_list.hide()
-          al_expand_collapse_click--
+          toggle_checky_click=!toggle_checky_click
         }
       })
     })()
