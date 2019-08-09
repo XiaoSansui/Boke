@@ -1,3 +1,12 @@
+ul{
+    padding: 0;
+    margin: 0;
+}
+li{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
 .resume-content {
     color: #333;
     background-color: rgba(0, 0, 0, .05)
@@ -184,53 +193,182 @@
     background: #69d2e7;
 }
 .resume-content .resume-skill .skill-container{
-    background: #cccccc;
-    padding: 15px;
-    border-radius: 10px;
+    display: grid;
+    grid-template-columns:repeat(3,1fr);
+    grid-template-rows:repeat(2,1fr);
+    grid-row-gap: 13px;
 }
-.resume-content .resume-skill .skill-container ul{
+.resume-content .resume-skill .skill-container p{
+    padding: 0;
+    margin: 0;
+    font-weight: 600
+}
+.resume-content .resume-skill .skill-container .progress{
+    width: 90%;
+    height: 20px;
+    background: transparent;
+    border-radius: 5px;
+    box-shadow: inset 0 0 3px rgb(204, 204, 204);
+    position: relative;
+    overflow: hidden;
+}
+.resume-content .resume-skill .progress::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 90%;
+    border-radius: 3px;
+    height: 100%;
+    background-color: #69d2e7;
+}
+.resume-content .resume-skill .skill-container li:nth-child(1) .progress::before{
+    width: 90%;
+    background-color: #ff7875
+}
+.resume-content .resume-skill .skill-container li:nth-child(2) .progress::before{
+    width: 90%;
+    background-color: #fff566
+}
+.resume-content .resume-skill .skill-container li:nth-child(3) .progress::before{
+    width: 90%;
+    background-color: #ffd666
+}
+.resume-content .resume-skill .skill-container li:nth-child(4) .progress::before{
+    width: 90%;
+    background-color: #69c0ff
+}
+.resume-content .resume-skill .skill-container li:nth-child(5) .progress::before{
+    width: 90%;
+    background-color: #d3f261
+}
+.resume-content .resume-skill .skill-container li:nth-child(6) .progress::before{
+    width: 90%;
+    background-color: #b37feb
+}
+.resume-content .resume-skill .outher-skill{
+}
+.resume-content .resume-skill .outher-skill ul{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    padding: 10px;
+    padding: 6px;
     margin: 0
 }
-.resume-content .resume-skill .skill-container ul li {
+.resume-content .resume-skill .outher-skill ul li {
     color: #333;
     list-style: none;
-    padding: 5px;
-    margin: 3px;
-    border-radius: 5px;
-    border: 1px solid #333;
+    padding: 5px 8px;
+    margin: 5px;
+    border-radius: 30px;
     display: inline-block;
+    box-shadow: 1.5px 1.5px 3px 1px #cecece;
+    position: relative;
+    overflow: hidden;
+    background-color: transparent;
+    z-index: 1;
+    transition:all .3s;
 }
-.resume-content .resume-skill .skill-container ul li:hover{
-    cursor: pointer;
-    background-color: #00a7e0;
+.resume-content .resume-skill .outher-skill ul li::after{
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: #69c0ff;
+    transition: left .3s;
+}
+.resume-content .resume-skill .outher-skill ul li:hover{
+    box-shadow: 0 0 10px 2px #cecece;
     color: #fff;
-    border-color: #fff;
+    cursor: pointer;
+}
+.resume-content .resume-skill .outher-skill ul li:hover::after{
+    left: 0
 }
 
-.resume-content .skill-container .content{
+.resume-content .outher-skill .content{
     display: flex;
     flex-direction: row;
     align-items: center;
-    border-top: 1px solid #666;
-    border-left: 1px solid #666;
-    border-right: 1px solid #666;
+    border-top: 1px solid #cecece;
+    border-left: 1px solid #cecece;
+    border-right: 1px solid #cecece;
 }
-.resume-content .skill-container .content:nth-last-child(1){
-    border-bottom: 1px solid #666;
+.resume-content .outher-skill .content:nth-last-child(1){
+    border-bottom: 1px solid #cecece;
 }
-.resume-content .skill-container .content .left{
+.resume-content .outher-skill .content .left{
     flex: 1;
-    font-size: 18px;    
+    font-size: 16px;    
+    font-weight: 600;
     text-align: center;
 }
-.resume-content .skill-container .content .right{
+.resume-content .outher-skill .content .right{
     flex: 3;     
-    border-left: 1px solid #666;   
+    border-left: 1px solid #cecece;   
 }
+
+
+.resume-content .container .works{
+    padding: 0 !important;
+}
+.works .container ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 0;
+}
+.works .container .content>li{
+    width: 30%;
+    height: 300px;
+    margin: 1.5%;
+    border: 1px solid red;
+    position: relative;
+    z-index: 2;
+}
+.works .container .content>li::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80%;
+    z-index: -1;
+    background-image: url(https://cdn.jsdelivr.net/gh/ShmilyXI/CDN@v1.0.7/img/background/12.jpg);
+    background-repeat: no-repeat;
+    background-clip: border-box;
+    background-size: cover;
+}
+.works .container .content>li .info{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 55%;
+    background: #999;
+    z-index: 5;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+.works .container .content>li .lables li{
+    margin: 3px 5px;
+    border-bottom: 3px solid #00a7e0;
+}
+
+
+
+
+
+
+
+
+
 
 
 
