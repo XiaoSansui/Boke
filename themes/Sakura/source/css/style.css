@@ -1,9 +1,9 @@
-ul {
+.resume-content ul {
     padding: 0;
     margin: 0;
 }
 
-li {
+.resume-content li {
     list-style: none;
     padding: 0;
     margin: 0;
@@ -122,7 +122,7 @@ li {
 .resume-content .content>.container .contact {
     background-color: #fff;
     padding: 15px;
-    margin-top: 15px;
+    margin: 15px -15px;
     box-shadow: 0 0 3px rgb(218, 218, 218);
 }
 
@@ -337,6 +337,7 @@ li {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    align-items: center;
     flex-wrap: wrap;
     margin: 0;
 }
@@ -464,7 +465,9 @@ li {
 
 
 
-
+#vcomments .info{
+    display: none
+}
 
 
 
@@ -502,7 +505,6 @@ li {
     font-family: sans-serif;
     color: white;
     position: absolute;
-    top: 12px;
     left: 17px;
     transition: 0.3s all ease;
 }
