@@ -2040,7 +2040,7 @@ a:active {
 }
 
 /* TODO:video-btn */
-/* #video-btn,
+#video-btn,
 #video-add {
     position: absolute;
     bottom: 3px;
@@ -2057,11 +2057,10 @@ a:active {
     -o-animation: poi-face 10s linear infinite alternate;
     animation: poi-face 10s linear infinite alternate
 }
-
 #video-btn:hover,
 #video-add:hover {
     opacity: 1
-} */
+}
 
 .video-play,
 .loadvideo {
@@ -2206,6 +2205,10 @@ a:active {
 }
 
 @media(max-width:860px) {
+    #video-btn,
+#video-add {
+    display: none;
+}
     .pattern-center header.single-header {
         padding: 0 4%
     }
