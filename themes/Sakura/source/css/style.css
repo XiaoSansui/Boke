@@ -5569,6 +5569,7 @@ li.feature-2 {
     .top-social_v2 li {
         margin-right: 0px !important;
         cursor: url(https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/cursor/ayuda.cur), auto !important;
+        position: relative;
     }
 }
 
@@ -5799,11 +5800,11 @@ li.feature-2 {
     height: 121px;
     padding: 10px;
     background: rgba(0, 0, 0, .4);
-    top: 40px;
-    left: -40px;
+    bottom: -120px;
+    right: 225px;
     -webkit-transform: translate3d(0, 50px, 0);
     transform: translate3d(0, 50px, 0);
-    opacity: 0
+    opacity: 0;
 }
 
 .wechatInner:before {
@@ -5827,7 +5828,7 @@ li.feature-2 {
     -ms-transition: .7s all ease
 }
 
-.wechat:hover .wechatInner {
+.wechat:hover ~.wechatInner {
     -webkit-transform: translate3d(0, 16px, 0);
     transform: translate3d(0, 16px, 0);
     opacity: 1;
