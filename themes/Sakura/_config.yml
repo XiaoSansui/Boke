@@ -31,6 +31,7 @@ menus:
   } }
   留言板: { path: /comment/, fa: fa-pencil-square-o faa-tada }
   # 友人帐: { path: /links/, fa: fa-link faa-shake }
+  Lover: { path: /lover/, fa: fa-heart faa-pulse }
   赞赏: { path: /donate/, fa: fa-heart faa-pulse }
   Lab: {path: /lab/, fa: fa-cogs }
   # 关于: { path: /about/, fa: fa-leaf faa-wrench }
