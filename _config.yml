@@ -5,7 +5,7 @@
 # Site
 title: Shmily
 subtitle:
-description: 
+description:
 keywords:
 author: Shmily
 language: zh-cn
@@ -38,21 +38,21 @@ render_drafts: false
 post_asset_folder: false
 relative_link: false
 future: true
-highlight: 
+highlight:
   enable: false
   line_number: false
   auto_detect: false
   tab_replace:
-  
+
 # Home page setting
 # path: Root path for your blogs index page. (default = '')
 # per_page: Posts displayed per page. (0 = disable pagination)
 # order_by: Posts order. (Order by date descending by default)
 index_generator:
-  path: ''
+  path: ""
   per_page: 10
   order_by: -date
-  
+
 # Category & Tag
 default_category: uncategorized
 category_map:
@@ -79,18 +79,27 @@ theme: Sakura
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repo: 
+  repo:
     # github: git@github.com:honjun/honjun.github.io.git
     github: https://github.com/ShmilyXI/Boke.git
     # coding: https://git.coding.net/hojun/hojun.git
-  branch: hexo
+    branch: hexo
+    
+  # type: rsync
+  # host: 47.107.83.220
+  # user: root
+  # root: /data/www
+  # port: 22
+  # delete: true
+  # verbose: true
+  # ignore_errors: false
 
 # backup
 backup:
   type: git
   message: backup my blog of https://github.com/ShmilyXI/Boke.git
   repository:
-    github: https://github.com/ShmilyXI/Boke.git,hexo
+    github: https://github.com/ShmilyXI/Boke.git,backup
     # coding: https://git.coding.net/hojun/hojun.git,backup
 
 #RSS
@@ -101,5 +110,44 @@ feed:
   hub:
   content:
   content_limit: 140
-  content_limit_delim: ' '
+  content_limit_delim: " "
   order_by: -date
+
+# Live2D
+## https://github.com/EYHN/hexo-helper-live2d
+live2d:
+  enable: true
+  scriptFrom: jsdelivr # 默认
+  pluginRootPath: live2dw/ # 插件在站点上的根目录(相对路径)
+  pluginJsPath: lib/ # 脚本文件相对与插件根目录路径
+  pluginModelPath: assets/ # 模型文件相对与插件根目录路径
+  # scriptFrom: jsdelivr # jsdelivr CDN
+  # scriptFrom: unpkg # unpkg CDN
+  # scriptFrom: https://cdn.jsdelivr.net/npm/live2d-widget@3.x/lib/L2Dwidget.min.js # 你的自定义 url
+  tagMode: false # 标签模式, 是否仅替换 live2d tag标签而非插入到所有页面中
+  debug: false # 调试, 是否在控制台输出日志
+  model:
+    # use: ./node_modules/live2d-widget-model-haru/01 # npm-module package name
+    # use: ./node_modules/live2d-widget-model-haru/02 # npm-module package name
+    # use: live2d-widget-model-hibiki # npm-module package name
+    # use: live2d-widget-model-koharu # npm-module package name
+    use: live2d-widget-model-z16 # npm-module package name
+    # use: hijiki # 博客根目录/live2d_models/ 下的目录名
+    # use: ./wives/hijiki # 相对于博客根目录的路径
+    # use: https://cdn.jsdelivr.net/npm/live2d-widget-model-hijiki@1.0.5/assets/hijiki.model.json # 你的自定义 url
+    scale: 0.5
+    hHeadPos: 0.5
+    vHeadPos: 0.618
+  display:
+    superSample: 2 # 灵敏度
+    width: 200
+    height: 200
+    position: left
+    hOffset: -55 # left
+    vOffset: -15 # bottom
+  mobile:
+    show: true
+    scale: 0.05
+  react:
+    opacityDefault: 1
+    opacityOnHover: 0.2
