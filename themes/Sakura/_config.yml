@@ -34,6 +34,7 @@ menus:
   Lover: { path: /lover/, fa: fa-heart faa-pulse }
   赞赏: { path: /donate/, fa: fa-heart faa-pulse }
   Lab: {path: /lab/, fa: fa-cogs }
+  资源库: {path: /netdisc/, fa: fa-cogs }
   # 关于: { path: /about/, fa: fa-leaf faa-wrench }
   # TODO:关于
   # 关于: { path: /, fa: fa-leaf faa-wrench , submenus: { 
