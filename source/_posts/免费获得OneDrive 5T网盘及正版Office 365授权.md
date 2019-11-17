@@ -1,17 +1,18 @@
 ---
 title: 免费获得OneDrive 5T网盘及正版Office 365授权
 author: ShmilyXI
-avatar: 'https://cdn.jsdelivr.net/gh/ShmilyXI/CDN@v1.0.8/img/custom/avatar.jpeg'
+avatar: 'https://cdn.jsdelivr.net/gh/ShmilyXI/CDN@v1.0.8/img/custom/avatar.jpg'
 authorLink: 'http://www.shmilyxy.cn'
 categories: 技术
 comments: true
 date: 2019-11-17 18:26:56
-authorAbout:
+authorAbout: 
 authorDesc:
-tags:
-keywords:
-description:
-photos:
+tags: 分享
+keywords: OneDrive5T
+description: 利用教育邮箱免费获取onedrive 5T存储空间
+photos: https://cdn.jsdelivr.net/gh/ShmilyXI/CDN@v1.0.8/img/background/25.jpg
+
 ---
 Onedrive是微软的网络硬盘，普通用户有5G的空间。今天介绍的方法可以达到5T的空间，而且方法简单、快速。
 

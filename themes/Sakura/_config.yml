@@ -51,7 +51,7 @@ menus:
         {
           Lover: { path: /lover/, fa: fa-heart faa-pulse },
           Lab: { path: /lab/, fa: fa-cogs },
-          云盘: { path: /netdisc/, fa: fa-cogs },
+          # 云盘: { path: /netdisc/, fa: fa-cogs },
         },
     }
   赞赏: { path: /donate/, fa: fa-heart faa-pulse }

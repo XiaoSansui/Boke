@@ -2,6 +2,27 @@
     padding: 0;
     margin: 0;
 }
+table{
+    border: 1px solid #666;
+}
+thead tr{
+    border-bottom: 1px solid #666;
+
+}
+ tbody tr{
+     border-bottom: 1px solid #666;
+}
+tbody tr td{
+    text-indent: 1em;
+    
+}
+/* .table-style tbody tr td:not(:nth-last-child(1)){
+    border-right: 1px solid #666;
+} */
+thead tr th:not(:nth-last-child(1)){
+    border-right: 1px solid #666;
+    
+}
 
 .resume-content li {
     list-style: none;
@@ -1964,7 +1985,7 @@ textarea {
 }
 
 a {
-    color: #e67474;
+    color: #ff6c6c;
     outline: 0;
     -webkit-transition: color .2s ease-out, border .2s ease-out, opacity .2s ease-out;
     -moz-transition: color .2s ease-out, border .2s ease-out, opacity .2s ease-out;
@@ -2930,7 +2951,8 @@ i.iconfont.hotpost {
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 2;
     overflow: hidden;
-    word-wrap: break-word
+    word-wrap: break-word;
+    text-align: left;
 }
 
 .post-date,
@@ -3007,7 +3029,8 @@ i.iconfont.hotpost {
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 3;
     height: 67.5px;
-    overflow: hidden
+    overflow: hidden;
+    text-align: left;
 }
 
 .post-list-thumb-left .post-content-wrap {
@@ -3336,17 +3359,17 @@ i.iconfont.hotpost {
 }
 
 .entry-content code {
-    background: rgba(254, 250, 199, 1);
-    color: #e67474;
+    background: rgba(0,0,0,0.05);
+    color: #333;
     word-break: break-word;
-    font-family: 'Source Code Pro', monospace, Helvetica, Tahoma, Arial, STXihei, "STHeiti Light", "Microsoft YaHei", sans-serif;
+    font-family: 'Source Han Serif SC', 'Source Han Serif', 'source-han-serif-sc', 'PT Serif', 'SongTi SC', 'MicroSoft Yahei', Georgia, serif;
     padding: 2px;
     text-shadow: none;
-    border-radius: 5px
+    border-radius: 3px
 }
 
 .entry-content a {
-    color: #e67474;
+    color: #ff6c6c;
     text-decoration: underline dotted rgba(0, 0, 0, .1)
 }
 
@@ -7220,8 +7243,8 @@ i.iconfont.down {
 
 .ex-login input.login-button:hover,
 .ex-register input.register-button:hover {
-    background-color: #e67474;
-    border-color: #e67474;
+    background-color: #ff6c6c;
+    border-color: #ff6c6c;
     color: #fff
 }
 
@@ -7260,7 +7283,7 @@ i.iconfont.down {
 }
 
 .ex-new-account a:hover {
-    color: #e67474
+    color: #ff6c6c
 }
 
 .ex-logout {
@@ -9953,7 +9976,8 @@ a.toc-link {
 
 @media(max-width:860px) {
     .serif {
-        font-family: 'Merriweather Sans', Helvetica, Tahoma, Arial, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft Yahei', 'WenQuanYi Micro Hei', sans-serif
+    font-family: 'Source Han Serif SC', 'Source Han Serif', 'source-han-serif-sc', 'PT Serif', 'SongTi SC', 'MicroSoft Yahei', Georgia, serif
+    /* font-family: 'Merriweather Sans', Helvetica, Tahoma, Arial, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft Yahei', 'WenQuanYi Micro Hei', sans-serif */
     }
 }
 
