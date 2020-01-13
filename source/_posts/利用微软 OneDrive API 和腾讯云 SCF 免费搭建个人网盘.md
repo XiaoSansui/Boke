@@ -1,7 +1,7 @@
 ---
 title: 利用微软 OneDrive API 和腾讯云 SCF 免费搭建个人网盘
 author: ShmilyXI
-avatar: "https://cdn.jsdelivr.net/gh/ShmilyXI/CDN@v1.0.8/img/custom/avatar.jpg"
+avatar: "https://cdn.jsdelivr.net/gh/ShmilyXI/CDN@v1.0.9/img/custom/avatar.jpg"
 authorLink: "http://www.shmilyxy.cn"
 categories: 技术
 comments: true
@@ -11,7 +11,7 @@ authorDesc:
 tags: 分享
 keywords: OneDrive5T
 description: 利用教育邮箱免费获取onedrive 5T存储空间
-photos: https://cdn.jsdelivr.net/gh/ShmilyXI/CDN@v1.0.8/img/background/6b8c14f8gy1fp2zdelaqjj21c70zuq8p.jpg
+photos: https://cdn.jsdelivr.net/gh/ShmilyXI/CDN@v1.0.9/img/background/6b8c14f8gy1fp2zdelaqjj21c70zuq8p.jpg
 ---
 
 ## SCF 简介
