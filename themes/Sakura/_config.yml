@@ -143,7 +143,7 @@ startdash:
       desc: 本站 hexo 主题,
       img: /img/startdash/sakura.md.png,
     }
-  - { url: /, title: Title, desc: desc, img: /img/startdash/bilibili.jpg }
+  - { url: https://live.bilibili.com/21932206, title: Bilibil, desc: B站快乐直播, img: /img/startdash/bilibili.jpg }
   - { url: /, title: Title, desc: desc, img: /img/startdash/wangshiwu.jpg }
 
 # your site build time or founded date
