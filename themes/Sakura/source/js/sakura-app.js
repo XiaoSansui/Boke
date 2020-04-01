@@ -1414,17 +1414,17 @@ var home = location.href,
         $("#main-container,#mo-nav,.openNav").toggleClass("open");
       }
     },
-    splay: function() {
-      $("#video-btn")
-        .addClass("video-pause")
-        .removeClass("video-play")
-        .show();
-      $(".video-stu").css({
-        bottom: "-100px"
-      });
-      $(".focusinfo").css({
-        top: "-999px"
-      });
+    // splay: function() {
+    //   $("#video-btn")
+    //     .addClass("video-pause")
+    //     .removeClass("video-play")
+    //     .show();
+    //   $(".video-stu").css({
+    //     bottom: "-100px"
+    //   });
+    //   $(".focusinfo").css({
+    //     top: "-999px"
+    //   });
       // $('#banner_wave_1').addClass('banner_wave_hide')
       // $('#banner_wave_2').addClass('banner_wave_hide')
       // for (var i = 0; i < ap.length; i++) {
@@ -1435,8 +1435,8 @@ var home = location.href,
       // try {
       //     hermitInit()
       // } catch (e) {}
-      s.play();
-    },
+      // s.play();
+    // },
     spause: function() {
       $("#video-btn")
         .addClass("video-play")
@@ -1476,56 +1476,57 @@ var home = location.href,
       $("#bgvideo").attr("src", Poi.movies.url + "/" + _t);
       $("#bgvideo").attr("video-name", _t);
     },
-    LV: function() {
-      var _btn = $("#video-btn");
-      _btn.on("click", function() {
-        if ($(this).hasClass("loadvideo")) {
-          $(this)
-            .addClass("video-pause")
-            .removeClass("loadvideo")
-            .hide();
-          Siren.addsource();
-          s.oncanplay = function() {
-            Siren.splay();
-            $("#video-add").show();
-            _btn.addClass("videolive");
-            _btn.addClass("haslive");
-          };
-        } else {
-          if ($(this).hasClass("video-pause")) {
-            Siren.spause();
-            _btn.removeClass("videolive");
-            $(".video-stu")
-              .css({
-                bottom: "0px"
-              })
-              .html("已暂停 ...");
-          } else {
-            Siren.splay();
-            _btn.addClass("videolive");
-          }
-        }
-        s.onended = function() {
-          $("#bgvideo").attr("src", "");
-          $("#video-add").hide();
-          _btn.addClass("loadvideo").removeClass("video-pause");
-          _btn.removeClass("videolive");
-          _btn.removeClass("haslive");
-          $(".focusinfo").css({
-            top: "49.3%"
-          });
-        };
-      });
-      $("#video-add").on("click", function() {
-        Siren.addsource();
-      });
-    },
+    // LV: function() {
+      // var _btn = $("#video-btn");
+      // _btn.on("click", function() {
+        // if ($(this).hasClass("loadvideo")) {
+        //   $(this)
+        //     .addClass("video-pause")
+        //     .removeClass("loadvideo")
+        //     .hide();
+        //   Siren.addsource();
+        //   s.oncanplay = function() {
+        //     Siren.splay();
+        //     $("#video-add").show();
+        //     _btn.addClass("videolive");
+        //     _btn.addClass("haslive");
+        //   };
+        // } else {
+        //   if ($(this).hasClass("video-pause")) {
+        //     Siren.spause();
+        //     _btn.removeClass("videolive");
+        //     $(".video-stu")
+        //       .css({
+        //         bottom: "0px"
+        //       })
+        //       .html("已暂停 ...");
+        //   } else {
+        //     Siren.splay();
+        //     _btn.addClass("videolive");
+        // //   }
+        // }
+        // s.onended = function() {
+        //   $("#bgvideo").attr("src", "");
+        //   $("#video-add").hide();
+        //   _btn.addClass("loadvideo").removeClass("video-pause");
+        //   _btn.removeClass("videolive");
+        //   _btn.removeClass("haslive");
+        //   $(".focusinfo").css({
+        //     top: "49.3%"
+        //   });
+        // };
+      // });
+      // $("#video-add").on("click", function() {
+      //   Siren.addsource();
+      // });
+    // },
     AH: function() {
       if (Poi.windowheight == "auto") {
         if ($("h1.main-title").length > 0) {
           var _height = $(window).height();
           $("#centerbg").css({
-            height: _height
+            height: _height/2,
+            backgroundSize:'cover'
           });
           $("#bgvideo").css({
             "min-height": _height
@@ -1549,7 +1550,7 @@ var home = location.href,
               height: "auto"
             })
             .show();
-          if (Poi.movies.live == "open") Siren.liveplay();
+          // if (Poi.movies.live == "open") Siren.liveplay();
           $(".site-header").addClass("is-homepage");
         } else {
           $(".blank").css({
@@ -1894,9 +1895,9 @@ $(function() {
   Siren.CE();
   Siren.MN();
   Siren.IA();
-  if (document.body.clientWidth > 860) {
-    Siren.LV();
-  }
+  // if (document.body.clientWidth > 860) {
+    // Siren.LV();
+  // }
   if (window.is_app) injectStyles("#nprogress .bar { display: none; }");
   if (Poi.pjax) {
     $(document)
