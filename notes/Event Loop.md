@@ -49,9 +49,7 @@ JavaScript 从诞生起就是单线程，原因大概是不想让浏览器变得
 
 以 Chrome 来说，我们可以通过 Chrome 的任务管理器来看看。
 
-
-
-![Chrome任务管理器](https://user-gold-cdn.xitu.io/2020/3/22/17102b254e650521?imageView2/0/w/1280/h/960/format/webp/ignore-error/1)
+![fJ4Kdy](https://cdn.jsdelivr.net/gh/ShmilyXI/Gallerys@master/BokeImage/fJ4Kdy.jpg)
 
 
 
@@ -83,9 +81,7 @@ JavaScript 从诞生起就是单线程，原因大概是不想让浏览器变得
 
 看到这里，总算是进入正题了，先讲讲浏览器端的 Event Loop 是什么样的。
 
-
-
-![JS运行机制图](https://user-gold-cdn.xitu.io/2020/3/26/171129962f45270f?imageView2/0/w/1280/h/960/format/webp/ignore-error/1)
+![JS运行机制图](https://cdn.jsdelivr.net/gh/ShmilyXI/Gallerys@master/BokeImage/iu91yJ.jpg)
 
 
 
@@ -155,9 +151,7 @@ JavaScript 的代码执行时，主线程会从上到下一步步的执行代码
 
 光说不练假把式，现在就来看一个例子：
 
-
-
-![举个栗子](https://user-gold-cdn.xitu.io/2020/3/29/171255d02d08b01c?imageView2/0/w/1280/h/960/format/webp/ignore-error/1)
+![举个栗子](https://cdn.jsdelivr.net/gh/ShmilyXI/Gallerys@master/BokeImage/qkqr3I.jpg)
 
 
 
@@ -191,7 +185,6 @@ JavaScript 的代码执行时，主线程会从上到下一步步的执行代码
 -    console.log("then12")
 -  })
 +  console.log('script end')
-复制代码
 ```
 
 1. 首先遇到 console.log()，输出 `script start`
@@ -295,11 +288,7 @@ Node 中的宏任务和微任务在浏览器端的 JS 相比增加了一些，�
 
 ## 事件循环机制的六个阶段
 
-
-
-![img](https://user-gold-cdn.xitu.io/2020/3/29/171255d02ce378ea?imageView2/0/w/1280/h/960/format/webp/ignore-error/1)
-
-
+![img](https://cdn.jsdelivr.net/gh/ShmilyXI/Gallerys@master/BokeImage/WrV58o.jpg)
 
 ### 六个阶段
 
@@ -363,19 +352,11 @@ setImmediate(() => {
 
 这里涉及 timers 阶段和 check 阶段，按照上面的运行顺序来说，timers 阶段是在第一个执行的，会早于 check 阶段。运行这段程序可以看到如下的结果：
 
-
-
-![img](https://user-gold-cdn.xitu.io/2020/3/29/171255d02cfbf05e?imageView2/0/w/1280/h/960/format/webp/ignore-error/1)
-
-
+![img](https://cdn.jsdelivr.net/gh/ShmilyXI/Gallerys@master/BokeImage/BIQAkd.jpg)
 
 可是再多运行几次，你就会看到如下的结果：
 
-
-
-![img](https://user-gold-cdn.xitu.io/2020/3/29/171255d030d5d817?imageView2/0/w/1280/h/960/format/webp/ignore-error/1)
-
-
+![img](https://cdn.jsdelivr.net/gh/ShmilyXI/Gallerys@master/BokeImage/8xiOdi.jpg)
 
 setImmediate 的输出跑到 setTimeout 前面去了，这时候就是：小朋友你是否有很多的问号❓
 
