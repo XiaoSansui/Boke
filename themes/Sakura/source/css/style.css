@@ -3,18 +3,18 @@
     margin: 0;
 }
 table{
-    border: 1px solid #666;
+    /* border: 1px solid #666; */
 }
 thead tr{
     border-bottom: 1px solid #666;
-
 }
- tbody tr{
-     border-bottom: 1px solid #666;
+/* 40 44 52 */
+ tbody tr:hover{
+     /* border-bottom: 1px dashedd #666; */
+     background-color: rgba(126, 126, 126, 0.2);
 }
 tbody tr td{
     text-indent: 1em;
-    
 }
 /* .table-style tbody tr td:not(:nth-last-child(1)){
     border-right: 1px solid #666;
@@ -1473,7 +1473,7 @@ input:-webkit-autofill {
 }
 
 ::selection {
-    background: #444;
+    background: rgba(126, 126, 126, 0.6);
     color: #fff
 }
 
@@ -1721,12 +1721,14 @@ i {
 }
 
 blockquote {
-    margin: 0;
-    padding: 30px 60px;
-    position: relative
+    color: #666;
+    padding: 1px 23px;
+    margin: 22px 0;
+    border-left: 4px solid #ff6d6d;
+    background-color: #f8f8f8;
 }
 
-blockquote:before {
+/* blockquote:before {
     content: "\f10d" !important;
     font-size: 3rem;
     position: absolute;
@@ -1748,7 +1750,7 @@ blockquote:after {
 
 blockquote p {
     margin: 5px 0
-}
+} */
 
 address {
     margin: 0 0 1.5em
@@ -1824,14 +1826,14 @@ body {
     /* cursor:url(https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/cursor/normal.cur),auto */
 }
 
-blockquote:before,
-blockquote:after,
+/* blockquote:before,
+blockquote:after, */
 q:before,
 q:after {
     content: ""
 }
 
-blockquote,
+/* blockquote, */
 q {
     quotes: """"
 }
@@ -9779,7 +9781,7 @@ a.toc-link {
 }
 
 .highlight-wrap code {
-    background: #1d1f21;
+    background-color: rgb(50,54,62) !important;
     color: #fff;
     word-break: break-word;
     font-family: 'Source Code Pro', monospace, Helvetica, Tahoma, Arial, STXihei, "STHeiti Light", "Microsoft YaHei", sans-serif;
@@ -9894,7 +9896,7 @@ a.toc-link {
 }
 
 .hljs-ln {
-    margin: 6px 0 0 0 !important
+    margin: 0 !important
 }
 
 .highlight td.numbers {
@@ -10367,11 +10369,12 @@ td.hljs-ln-numbers {
     user-select: none;
     text-align: center;
     color: #888f96;
-    background: #1d1f21;
+    background: rgb(30,34,42);
     font-family: 'Source Code Pro', monospace, Helvetica, Tahoma, Arial, STXihei, "STHeiti Light", "Microsoft YaHei", sans-serif;
     vertical-align: top;
     left: 0;
     width: 30px;
+    padding-right:3px !important;
 }
 
 .post-share:hover .show-share,

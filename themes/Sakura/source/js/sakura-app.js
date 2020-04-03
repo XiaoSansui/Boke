@@ -1,16 +1,16 @@
 var _typeof =
   typeof Symbol === "function" && typeof Symbol.iterator === "symbol"
-    ? function(a) {
-        return typeof a;
-      }
-    : function(a) {
-        return a &&
-          typeof Symbol === "function" &&
-          a.constructor === Symbol &&
-          a !== Symbol.prototype
-          ? "symbol"
-          : typeof a;
-      };
+    ? function (a) {
+      return typeof a;
+    }
+    : function (a) {
+      return a &&
+        typeof Symbol === "function" &&
+        a.constructor === Symbol &&
+        a !== Symbol.prototype
+        ? "symbol"
+        : typeof a;
+    };
 
 function cloneObject(a) {
   if (
@@ -33,23 +33,23 @@ function cloneObject(a) {
   }
 }
 
-mashiro_global.variables = new (function() {
+mashiro_global.variables = new (function () {
   this.has_bot_ui = false;
   this.isNight = false;
   this.skinSecter = false;
 })();
-mashiro_global.ini = new (function() {
-  this.normalize = function() {
+mashiro_global.ini = new (function () {
+  this.normalize = function () {
     lazyload();
     social_share();
     mashiro_global.post_list_show_animation.ini();
     copy_code_block();
     if (window.is_app) {
       try {
-        setTimeout(function() {
+        setTimeout(function () {
           mashiro_option.app_update(true);
         }, 10000);
-      } catch (e) {}
+      } catch (e) { }
     }
     if ($("div").hasClass("poem-wrap")) {
       get_poem("#poem", "#info");
@@ -80,7 +80,7 @@ mashiro_global.ini = new (function() {
     //   hearthstone_deck_iframe()
     // })
   };
-  this.pjax = function() {
+  this.pjax = function () {
     pjaxInit();
     social_share();
     mashiro_global.post_list_show_animation.ini();
@@ -91,8 +91,8 @@ mashiro_global.ini = new (function() {
     hearthstone_deck_iframe();
   };
 })();
-mashiro_global.lib = new (function() {
-  this.removeClass = function(ele, className) {
+mashiro_global.lib = new (function () {
+  this.removeClass = function (ele, className) {
     var el = document.getElementById(ele);
     if (el.classList) {
       el.classList.remove(className);
@@ -106,7 +106,7 @@ mashiro_global.lib = new (function() {
       );
     }
   };
-  this.addClass = function(ele, className) {
+  this.addClass = function (ele, className) {
     var el = document.getElementById(ele);
     if (el.classList) {
       el.classList.add(className);
@@ -114,7 +114,7 @@ mashiro_global.lib = new (function() {
       el.className += " " + className;
     }
   };
-  this.hasClass = function(ele, className) {
+  this.hasClass = function (ele, className) {
     var el = document.getElementById(ele);
     if (el.classList) {
       var e = el.classList.contains(className);
@@ -125,7 +125,7 @@ mashiro_global.lib = new (function() {
     }
     return e;
   };
-  this.toggleClass = function(ele, className) {
+  this.toggleClass = function (ele, className) {
     var el = document.getElementById(ele);
     if (el.classList) {
       el.classList.toggle(className);
@@ -140,10 +140,10 @@ mashiro_global.lib = new (function() {
       el.className = classes.join(" ");
     }
   };
-  this.saveFile = function(url, file_name) {
+  this.saveFile = function (url, file_name) {
     var xhr = new XMLHttpRequest();
     xhr.responseType = "blob";
-    xhr.onload = function() {
+    xhr.onload = function () {
       var a = document.createElement("a");
       a.href = window.URL.createObjectURL(xhr.response);
       a.download = file_name;
@@ -224,9 +224,9 @@ function imgError(ele, type) {
         "https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/image-404.png";
   }
 }
-mashiro_global.post_list_show_animation = new (function() {
-  this.ini = function(ajax) {
-    $("article.post-list-thumb").each(function(i) {
+mashiro_global.post_list_show_animation = new (function () {
+  this.ini = function (ajax) {
+    $("article.post-list-thumb").each(function (i) {
       if (ajax) {
         var window_height = $(window).height();
       } else {
@@ -247,7 +247,7 @@ mashiro_global.post_list_show_animation = new (function() {
           .eq(i)
           .addClass("post-list-show");
       }
-      $(window).scroll(function() {
+      $(window).scroll(function () {
         var scrolltop = $(window).scrollTop();
         if (scrolltop + window_height >= article_height && scrolltop) {
           $("article.post-list-thumb")
@@ -258,8 +258,8 @@ mashiro_global.post_list_show_animation = new (function() {
     });
   };
 })();
-mashiro_global.font_control = new (function() {
-  this.change_font = function() {
+mashiro_global.font_control = new (function () {
+  this.change_font = function () {
     if ($("body").hasClass("serif")) {
       $("body").removeClass("serif");
       $(".control-btn-serif").removeClass("selected");
@@ -275,7 +275,7 @@ mashiro_global.font_control = new (function() {
       }
     }
   };
-  this.ini = function() {
+  this.ini = function () {
     if (document.body.clientWidth > 860) {
       if (!getCookie("font_family") || getCookie("font_family") == "serif") {
         $("body").addClass("serif");
@@ -314,13 +314,13 @@ function code_highlight_style() {
     }
     $("pre:eq(" + i + ") code").attr("data-rel", lang.toUpperCase());
   }
-  $("pre code").each(function(i, block) {
+  $("pre code").each(function (i, block) {
     hljs.highlightBlock(block);
   });
   for (var i = 0; i < $("article pre").length; i++) {
     gen_top_bar(i);
   }
-  $("pre").on("click", function(e) {
+  $("pre").on("click", function (e) {
     if (e.target !== this) return;
     $(this).toggleClass("code-block-fullscreen");
     $("html").toggleClass("code-block-fullscreen-html-scroll");
@@ -329,22 +329,22 @@ function code_highlight_style() {
 }
 try {
   code_highlight_style();
-} catch (e) {}
+} catch (e) { }
 
 function copy_code_block() {
-  $("pre code").each(function(i, block) {
+  $("pre code").each(function (i, block) {
     $(block).attr({ id: "hljs-" + i });
     $(this).after(
       '<a class="copy-code" href="javascript:" data-clipboard-target="#hljs-' +
-        i +
-        '" title="拷贝代码"><i class="fa fa-clipboard" aria-hidden="true"></i></a>'
+      i +
+      '" title="拷贝代码"><i class="fa fa-clipboard" aria-hidden="true"></i></a>'
     );
   });
   var clipboard = new ClipboardJS(".copy-code");
 }
 
 function attach_image() {
-  $("#upload-img-file").change(function() {
+  $("#upload-img-file").change(function () {
     if (this.files.length > 10) {
       addComment.createButterbar(
         "每次上传上限为10张.<br>10 files max per request."
@@ -355,8 +355,8 @@ function attach_image() {
       if (this.files[i].size >= 5242880) {
         alert(
           "图片上传大小限制为5 MB.\n5 MB max per file.\n\n「" +
-            this.files[i].name +
-            "」\n\n这张图太大啦~\nThis image is too large~"
+          this.files[i].name +
+          "」\n\n这张图太大啦~\nThis image is too large~"
         );
       }
     }
@@ -370,17 +370,17 @@ function attach_image() {
         processData: false,
         contentType: false,
         data: formData,
-        beforeSend: function(xhr) {
+        beforeSend: function (xhr) {
           $(".insert-image-tips").html(
             '<i class="fa fa-spinner rotating" aria-hidden="true"></i>'
           );
           addComment.createButterbar("上传中...<br>Uploading...");
         },
-        success: function(res) {
+        success: function (res) {
           $(".insert-image-tips").html(
             '<i class="fa fa-check" aria-hidden="true"></i>'
           );
-          setTimeout(function() {
+          setTimeout(function () {
             $(".insert-image-tips").html(
               '<i class="fa fa-picture-o" aria-hidden="true"></i>'
             );
@@ -391,10 +391,10 @@ function attach_image() {
           );
           $("#upload-img-show").append(
             '<img class="lazyload upload-image-preview" src="https://cdn.jsdelivr.net/gh/moezx/cdn@3.0.2/img/svg/loader/trans.ajax-spinner-preloader.svg" data-src="' +
-              get_the_url +
-              '" onclick="window.open(\'' +
-              get_the_url +
-              '\')" onerror="imgError(this)" />'
+            get_the_url +
+            '" onclick="window.open(\'' +
+            get_the_url +
+            '\')" onerror="imgError(this)" />'
           );
           lazyload();
           addComment.createButterbar("图片上传成功~<br>Uploaded successfully~");
@@ -403,12 +403,12 @@ function attach_image() {
             (type = "Img")
           );
         },
-        error: function() {
+        error: function () {
           $(".insert-image-tips").html(
             '<i class="fa fa-times" aria-hidden="true" style="color:red"></i>'
           );
           alert("上传失败，请重试.\nUpload failed, please try again.");
-          setTimeout(function() {
+          setTimeout(function () {
             $(".insert-image-tips").html(
               '<i class="fa fa-picture-o" aria-hidden="true"></i>'
             );
@@ -429,11 +429,11 @@ function add_upload_tips() {
   ).insertAfter($(".form-submit #submit"));
   attach_image();
   $("#upload-img-file").hover(
-    function() {
+    function () {
       $(".insert-image-tips").addClass("insert-image-tips-hover");
       $("#uploadTipPopup").addClass("show");
     },
-    function() {
+    function () {
       $(".insert-image-tips").removeClass("insert-image-tips-hover");
       $("#uploadTipPopup").removeClass("show");
     }
@@ -441,7 +441,7 @@ function add_upload_tips() {
 }
 
 function click_to_view_image() {
-  $(".comment_inline_img").click(function() {
+  $(".comment_inline_img").click(function () {
     var temp_url = $(this).attr("src");
     window.open(temp_url);
   });
@@ -449,7 +449,7 @@ function click_to_view_image() {
 click_to_view_image();
 
 function original_emoji_click() {
-  $(".emoji-item").click(function() {
+  $(".emoji-item").click(function () {
     grin($(this).text(), (type = "custom"), (before = "`"), (after = "` "));
   });
 }
@@ -465,7 +465,7 @@ function cmt_showPopup(ele) {
   popup.addClass("show");
   $(ele)
     .find("input")
-    .blur(function() {
+    .blur(function () {
       popup.removeClass("show");
     });
 }
@@ -482,7 +482,7 @@ function headertop_down() {
 
 function scrollBar() {
   if (document.body.clientWidth > 860) {
-    $(window).scroll(function() {
+    $(window).scroll(function () {
       var s = $(window).scrollTop();
       var a = $(document).height();
       var b = $(window).height();
@@ -532,15 +532,15 @@ function checkBgImgCookie() {
   if (bgurl != "") {
     if (
       bgurl ==
-        "https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/themebg/sakura.png" ||
+      "https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/themebg/sakura.png" ||
       bgurl ==
-        "https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/themebg/plaid.jpg" ||
+      "https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/themebg/plaid.jpg" ||
       bgurl ==
-        "https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/themebg/star.png" ||
+      "https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/themebg/star.png" ||
       bgurl ==
-        "https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/themebg/point.png" ||
+      "https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/themebg/point.png" ||
       bgurl ==
-        "https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/themebg/little-monster.png"
+      "https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/themebg/little-monster.png"
     ) {
       mashiro_global.variables.skinSecter = true;
       mashiro_global.variables.isNight = false;
@@ -576,7 +576,7 @@ if (document.body.clientWidth > 860) {
 }
 
 function no_right_click() {
-  $(".post-thumb img").bind("contextmenu", function(e) {
+  $(".post-thumb img").bind("contextmenu", function (e) {
     return false;
   });
 }
@@ -585,9 +585,9 @@ if (mashiro_global.variables.isNight) {
 } else {
   $(".changeSkin-gear, .toc").css("background", "none");
 }
-$(document).ready(function() {
+$(document).ready(function () {
   function changeBG(tagid, url) {
-    $(".skin-menu " + tagid).click(function() {
+    $(".skin-menu " + tagid).click(function () {
       mashiro_global.variables.skinSecter = true;
       mashiro_global.variables.isNight = false;
       $("#night-mode-cover").css("visibility", "hidden");
@@ -607,7 +607,7 @@ $(document).ready(function() {
   }
 
   function changeBGnoTrans(tagid, url) {
-    $(".skin-menu " + tagid).click(function() {
+    $(".skin-menu " + tagid).click(function () {
       mashiro_global.variables.skinSecter = true;
       mashiro_global.variables.isNight = true;
       $("#night-mode-cover").css("visibility", "hidden");
@@ -646,7 +646,7 @@ $(document).ready(function() {
     "https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/themebg/little-monster.png"
   );
   changeBGnoTrans("#bing-bg", "https://api.shino.cc/bing/");
-  $(".skin-menu #white-bg").click(function() {
+  $(".skin-menu #white-bg").click(function () {
     mashiro_global.variables.skinSecter = false;
     mashiro_global.variables.isNight = false;
     $("#night-mode-cover").css("visibility", "hidden");
@@ -663,7 +663,7 @@ $(document).ready(function() {
     closeSkinMenu();
     setCookie("bgImgSetting", "", 30);
   });
-  $(".skin-menu #dark-bg").click(function() {
+  $(".skin-menu #dark-bg").click(function () {
     mashiro_global.variables.skinSecter = true;
     mashiro_global.variables.isNight = true;
     $("body").css(
@@ -685,7 +685,7 @@ $(document).ready(function() {
 
   function closeSkinMenu() {
     $(".skin-menu").removeClass("show");
-    setTimeout(function() {
+    setTimeout(function () {
       $(".changeSkin-gear").css("visibility", "visible");
     }, 300);
     if (mashiro_global.variables.isNight) {
@@ -694,7 +694,7 @@ $(document).ready(function() {
       $(".changeSkin-gear, .toc").css("background", "none");
     }
   }
-  $(".changeSkin-gear").click(function() {
+  $(".changeSkin-gear").click(function () {
     $(".skin-menu").toggleClass("show");
     if (mashiro_global.variables.isNight) {
       $(".changeSkin").css("background", "rgba(255,255,255,0.8)");
@@ -702,7 +702,7 @@ $(document).ready(function() {
       $(".changeSkin").css("background", "none");
     }
   });
-  $(".skin-menu #close-skinMenu").click(function() {
+  $(".skin-menu #close-skinMenu").click(function () {
     closeSkinMenu();
   });
   add_upload_tips();
@@ -725,18 +725,18 @@ function preBG() {
     'url("' + bg[Math.abs(bgindex % bg.length)] + '")'
   );
 }
-$(document).ready(function() {
+$(document).ready(function () {
   var bgindex = Math.floor(Math.random() * bg.length);
   $(".centerbg").css("background-image", 'url("' + bg[bgindex] + '")');
-  $("#bg-next").click(function() {
+  $("#bg-next").click(function () {
     nextBG();
   });
-  $("#bg-pre").click(function() {
+  $("#bg-pre").click(function () {
     preBG();
   });
 });
 if (document.body.clientWidth <= 860 && !window.is_app) {
-  window.onscroll = function() {
+  window.onscroll = function () {
     scrollFunction();
   };
 
@@ -771,7 +771,7 @@ function reload_show_date_time() {
 
 function timeSeriesReload(flag) {
   if (flag == true) {
-    $("#archives span.al_mon").click(function() {
+    $("#archives span.al_mon").click(function () {
       $(this)
         .next()
         .slideToggle(400);
@@ -779,11 +779,11 @@ function timeSeriesReload(flag) {
     });
     lazyload();
   } else {
-    (function() {
+    (function () {
       $("#al_expand_collapse,#archives span.al_mon").css({
         cursor: "s-resize"
       });
-      $("#archives span.al_mon").each(function() {
+      $("#archives span.al_mon").each(function () {
         var num = $(this)
           .next()
           .children("li").length;
@@ -793,24 +793,24 @@ function timeSeriesReload(flag) {
       });
       var $al_post_list = $("#archives ul.al_post_list"),
         $al_post_list_f = $("#archives ul.al_post_list:first");
-      $al_post_list.hide(1, function() {
+      $al_post_list.hide(1, function () {
         $al_post_list_f.show();
       });
-      $("#archives span.al_mon").click(function() {
+      $("#archives span.al_mon").click(function () {
         $(this)
           .next()
           .slideToggle(400);
         return false;
       });
       if (document.body.clientWidth > 860) {
-        $("#archives li.al_li").mouseover(function() {
+        $("#archives li.al_li").mouseover(function () {
           $(this)
             .children(".al_post_list")
             .show(400);
           return false;
         });
         if (false) {
-          $("#archives li.al_li").mouseout(function() {
+          $("#archives li.al_li").mouseout(function () {
             $(this)
               .children(".al_post_list")
               .hide(400);
@@ -819,7 +819,7 @@ function timeSeriesReload(flag) {
         }
       }
       var al_expand_collapse_click = 0;
-      $("#al_expand_collapse").click(function() {
+      $("#al_expand_collapse").click(function () {
         if (al_expand_collapse_click == 0) {
           $al_post_list.show();
           al_expand_collapse_click++;
@@ -833,7 +833,7 @@ function timeSeriesReload(flag) {
 }
 timeSeriesReload();
 
-var pjaxInit = function() {
+var pjaxInit = function () {
   add_upload_tips();
   click_to_view_image();
   original_emoji_click();
@@ -841,17 +841,17 @@ var pjaxInit = function() {
   $("p").remove(".head-copyright");
   try {
     code_highlight_style();
-  } catch (e) {}
+  } catch (e) { }
   try {
     inlojv_js_getqqinfo();
-  } catch (e) {}
+  } catch (e) { }
   lazyload();
   // if ($("div").hasClass("popcontainer")) {
   //     loadBotui();
   // }
   try {
     reload_show_date_time();
-  } catch (e) {}
+  } catch (e) { }
   if (mashiro_global.variables.skinSecter === true) {
     $(".pattern-center")
       .removeClass("pattern-center")
@@ -868,10 +868,10 @@ var pjaxInit = function() {
     .css("width", "50px")
     .css("height", "50px");
   $(".openNav").css("height", "50px");
-  $("#bg-next").click(function() {
+  $("#bg-next").click(function () {
     nextBG();
   });
-  $("#bg-pre").click(function() {
+  $("#bg-pre").click(function () {
     preBG();
   });
   smileBoxToggle();
@@ -879,7 +879,7 @@ var pjaxInit = function() {
   add_copyright();
   console.log($("#myscript").text());
 };
-$(document).on("click", ".sm", function() {
+$(document).on("click", ".sm", function () {
   var msg = "您真的要设为私密吗？";
   if (confirm(msg) == true) {
     $(this).commentPrivate();
@@ -887,7 +887,7 @@ $(document).on("click", ".sm", function() {
     aler("已取消");
   }
 });
-$.fn.commentPrivate = function() {
+$.fn.commentPrivate = function () {
   if ($(this).hasClass("private_now")) {
     alert("您之前已设过私密评论");
     return false;
@@ -901,7 +901,7 @@ $.fn.commentPrivate = function() {
       p_id: idp,
       p_action: actionp
     };
-    $.post("/wp-admin/admin-ajax.php", ajax_data, function(data) {
+    $.post("/wp-admin/admin-ajax.php", ajax_data, function (data) {
       $(rateHolderp).html(data);
     });
     return false;
@@ -921,7 +921,7 @@ function show_date_time() {
 }
 try {
   show_date_time();
-} catch (e) {}
+} catch (e) { }
 POWERMODE.colorful = true;
 POWERMODE.shake = false;
 document.body.addEventListener("input", POWERMODE);
@@ -935,18 +935,18 @@ function motionSwitch(ele) {
   $(ele + "-bar").addClass("on-hover");
   $(ele + "-container").css("display", "block");
 }
-$(".comt-addsmilies").click(function() {
+$(".comt-addsmilies").click(function () {
   $(".comt-smilies").toggle();
 });
-$(".comt-smilies a").click(function() {
+$(".comt-smilies a").click(function () {
   $(this)
     .parent()
     .hide();
 });
 
 function smileBoxToggle() {
-  $(document).ready(function() {
-    $("#emotion-toggle").click(function() {
+  $(document).ready(function () {
+    $("#emotion-toggle").click(function () {
       $(".emotion-toggle-off").toggle(0);
       $(".emotion-toggle-on").toggle(0);
       $(".emotion-box").toggle(160);
@@ -1004,7 +1004,7 @@ function grin(tag, type, before, after) {
 // });
 
 function add_copyright() {
-  document.body.addEventListener("copy", function(e) {
+  document.body.addEventListener("copy", function (e) {
     if (
       !mashiro_global.is_user_logged_in &&
       window.getSelection().toString().length > 30
@@ -1062,7 +1062,7 @@ function add_copyright() {
   }
 }
 add_copyright();
-$(function() {
+$(function () {
   inlojv_js_getqqinfo();
 });
 
@@ -1094,7 +1094,7 @@ function inlojv_js_getqqinfo() {
     }
   }
   var emailAddressFlag = $("input#email").val();
-  $("input#author").on("blur", function() {
+  $("input#author").on("blur", function () {
     var qq = $("input#author").val();
     $.ajax({
       type: "get",
@@ -1102,7 +1102,7 @@ function inlojv_js_getqqinfo() {
       dataType: "jsonp",
       jsonp: "callback",
       jsonpCallback: "portraitCallBack",
-      success: function(data) {
+      success: function (data) {
         $("input#author").val(data[qq][6]);
         $("input#email").val($.trim(qq) + "@qq.com");
         if (mashiro_option.qzone_autocomplete) {
@@ -1125,7 +1125,7 @@ function inlojv_js_getqqinfo() {
         setCookie("user_email", qq + "@qq.com", 30);
         emailAddressFlag = $("input#email").val();
       },
-      error: function() {
+      error: function () {
         if (qq_test.test(qq)) {
           addComment.createButterbar("QQ号不存在（建议不要使用纯数字昵称）");
         }
@@ -1147,17 +1147,17 @@ function inlojv_js_getqqinfo() {
       dataType: "jsonp",
       jsonp: "callback",
       jsonpCallback: "qqavatarCallBack",
-      beforeSend: function() {
+      beforeSend: function () {
         if (qq_test.test(qq)) {
           addComment.createButterbar("正在获取QQ头像...");
         }
       },
-      success: function(data) {
+      success: function (data) {
         $("div.comment-user-avatar img").attr("src", data[qq]);
         addComment.createButterbar("QQ头像获取成功");
         setCookie("user_avatar", data[qq], 30);
       },
-      error: function() {
+      error: function () {
         if (qq_test.test(qq)) {
           addComment.createButterbar("QQ号不存在（建议不要使用纯数字昵称）");
         }
@@ -1193,7 +1193,7 @@ function inlojv_js_getqqinfo() {
       $(".gravatar-check").css("display", "block");
     }
   }
-  $("input#email").on("blur", function() {
+  $("input#email").on("blur", function () {
     var emailAddress = $("input#email").val();
     if (is_get_by_qq == false || emailAddressFlag != emailAddress) {
       $("div.comment-user-avatar img").attr(
@@ -1214,7 +1214,7 @@ function inlojv_js_getqqinfo() {
   if (getCookie("user_url")) {
     $("input#url").val(getCookie("user_url"));
   }
-  $("input#url").on("blur", function() {
+  $("input#url").on("blur", function () {
     var URL_Address = $("input#url").val();
     $("input#url").val(URL_Address);
     setCookie("user_url", URL_Address, 30);
@@ -1222,7 +1222,7 @@ function inlojv_js_getqqinfo() {
   if (getCookie("user_author")) {
     $("input#author").val(getCookie("user_author"));
   }
-  $("input#author").on("blur", function() {
+  $("input#author").on("blur", function () {
     var user_name = $("input#author").val();
     $("input#author").val(user_name);
     setCookie("user_author", user_name, 30);
@@ -1235,7 +1235,7 @@ function get_poem(poem_ele, info_ele) {
   var xhr = new XMLHttpRequest();
   xhr.open("get", "https://v2.jinrishici.com/one.json");
   xhr.withCredentials = true;
-  xhr.onreadystatechange = function() {
+  xhr.onreadystatechange = function () {
     if (xhr.readyState === 4) {
       var data = JSON.parse(xhr.responseText);
       poem.innerHTML = data.data.content;
@@ -1273,10 +1273,10 @@ function mail_me() {
 
 function hearthstone_deck_iframe() {
   if ($("iframe").hasClass("hearthstone-deck")) {
-    $(".hearthstone-deck").each(function() {
+    $(".hearthstone-deck").each(function () {
       $(this).attr("height", ($(this).width() * 5) / 9 + "px");
     });
-    $(".hearthstone-deck-container").each(function() {
+    $(".hearthstone-deck-container").each(function () {
       var deck_container_height_fix = ($(this).width() * 5) / 9 + 14;
       $(this).css("height", deck_container_height_fix + "px");
     });
@@ -1311,7 +1311,7 @@ mashiro_global.ini.normalize();
 var home = location.href,
   s = $("#bgvideo")[0],
   Siren = {
-    TOC: function() {
+    TOC: function () {
       if ($(".toc").length > 0 && document.body.clientWidth > 1200) {
         if ($(".pattern-center").length > 0) {
           //有图的情况
@@ -1340,7 +1340,7 @@ var home = location.href,
           });
         }
         var offsetTop = $(".toc").offset().top - 135;
-        window.onscroll = function() {
+        window.onscroll = function () {
           var scrollTop =
             window.pageYOffset ||
             document.documentElement.scrollTop ||
@@ -1356,16 +1356,16 @@ var home = location.href,
         );
       }
     },
-    AB: function() {
+    AB: function () {
       if (window.location.pathname.indexOf("about") > -1) {
-        $.getScript("//cdn.jsdelivr.net/vue/latest/vue.min.js", function() {
-          $.getScript("//unpkg.com/botui/build/botui.min.js", function() {
+        $.getScript("//cdn.jsdelivr.net/vue/latest/vue.min.js", function () {
+          $.getScript("//unpkg.com/botui/build/botui.min.js", function () {
             bot_ui_ini();
           });
         });
       }
     },
-    VA: function() {
+    VA: function () {
       if (!valine) {
         var valine = new Valine();
         valine.init({
@@ -1377,11 +1377,11 @@ var home = location.href,
         });
       }
     },
-    MJ: function() {
+    MJ: function () {
       if (mashiro_option.mathjax == "1") {
         $.getScript(
           "//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML",
-          function() {
+          function () {
             MathJax.Hub.Config({
               tex2jax: { inlineMath: [["$", "$"], ["\\(", "\\)"]] }
             });
@@ -1391,8 +1391,8 @@ var home = location.href,
         );
       }
     },
-    MN: function() {
-      $(".iconflat").on("click", function() {
+    MN: function () {
+      $(".iconflat").on("click", function () {
         if ($("#main-container").hasClass("open")) {
           $(".iconflat")
             .css("width", "50px")
@@ -1408,7 +1408,7 @@ var home = location.href,
         $("#main-container,#mo-nav,.openNav").toggleClass("open");
       });
     },
-    MNH: function() {
+    MNH: function () {
       if ($("body").hasClass("navOpen")) {
         $("body").toggleClass("navOpen");
         $("#main-container,#mo-nav,.openNav").toggleClass("open");
@@ -1425,19 +1425,19 @@ var home = location.href,
     //   $(".focusinfo").css({
     //     top: "-999px"
     //   });
-      // $('#banner_wave_1').addClass('banner_wave_hide')
-      // $('#banner_wave_2').addClass('banner_wave_hide')
-      // for (var i = 0; i < ap.length; i++) {
-      //     try {
-      //         ap[i].destroy()
-      //     } catch (e) {}
-      // }
-      // try {
-      //     hermitInit()
-      // } catch (e) {}
-      // s.play();
+    // $('#banner_wave_1').addClass('banner_wave_hide')
+    // $('#banner_wave_2').addClass('banner_wave_hide')
+    // for (var i = 0; i < ap.length; i++) {
+    //     try {
+    //         ap[i].destroy()
+    //     } catch (e) {}
+    // }
+    // try {
+    //     hermitInit()
+    // } catch (e) {}
+    // s.play();
     // },
-    spause: function() {
+    spause: function () {
       $("#video-btn")
         .addClass("video-play")
         .removeClass("video-pause");
@@ -1448,14 +1448,14 @@ var home = location.href,
       // $('#banner_wave_2').removeClass('banner_wave_hide')
       s.pause();
     },
-    liveplay: function() {
+    liveplay: function () {
       if (s.oncanplay != undefined && $(".haslive").length > 0) {
         if ($(".videolive").length > 0) {
           Siren.splay();
         }
       }
     },
-    livepause: function() {
+    livepause: function () {
       if (s.oncanplay != undefined && $(".haslive").length > 0) {
         Siren.spause();
         $(".video-stu")
@@ -1465,7 +1465,7 @@ var home = location.href,
           .html("已暂停 ...");
       }
     },
-    addsource: function() {
+    addsource: function () {
       $(".video-stu")
         .html("正在载入视频 ...")
         .css({
@@ -1477,61 +1477,61 @@ var home = location.href,
       $("#bgvideo").attr("video-name", _t);
     },
     // LV: function() {
-      // var _btn = $("#video-btn");
-      // _btn.on("click", function() {
-        // if ($(this).hasClass("loadvideo")) {
-        //   $(this)
-        //     .addClass("video-pause")
-        //     .removeClass("loadvideo")
-        //     .hide();
-        //   Siren.addsource();
-        //   s.oncanplay = function() {
-        //     Siren.splay();
-        //     $("#video-add").show();
-        //     _btn.addClass("videolive");
-        //     _btn.addClass("haslive");
-        //   };
-        // } else {
-        //   if ($(this).hasClass("video-pause")) {
-        //     Siren.spause();
-        //     _btn.removeClass("videolive");
-        //     $(".video-stu")
-        //       .css({
-        //         bottom: "0px"
-        //       })
-        //       .html("已暂停 ...");
-        //   } else {
-        //     Siren.splay();
-        //     _btn.addClass("videolive");
-        // //   }
-        // }
-        // s.onended = function() {
-        //   $("#bgvideo").attr("src", "");
-        //   $("#video-add").hide();
-        //   _btn.addClass("loadvideo").removeClass("video-pause");
-        //   _btn.removeClass("videolive");
-        //   _btn.removeClass("haslive");
-        //   $(".focusinfo").css({
-        //     top: "49.3%"
-        //   });
-        // };
-      // });
-      // $("#video-add").on("click", function() {
-      //   Siren.addsource();
-      // });
+    // var _btn = $("#video-btn");
+    // _btn.on("click", function() {
+    // if ($(this).hasClass("loadvideo")) {
+    //   $(this)
+    //     .addClass("video-pause")
+    //     .removeClass("loadvideo")
+    //     .hide();
+    //   Siren.addsource();
+    //   s.oncanplay = function() {
+    //     Siren.splay();
+    //     $("#video-add").show();
+    //     _btn.addClass("videolive");
+    //     _btn.addClass("haslive");
+    //   };
+    // } else {
+    //   if ($(this).hasClass("video-pause")) {
+    //     Siren.spause();
+    //     _btn.removeClass("videolive");
+    //     $(".video-stu")
+    //       .css({
+    //         bottom: "0px"
+    //       })
+    //       .html("已暂停 ...");
+    //   } else {
+    //     Siren.splay();
+    //     _btn.addClass("videolive");
+    // //   }
+    // }
+    // s.onended = function() {
+    //   $("#bgvideo").attr("src", "");
+    //   $("#video-add").hide();
+    //   _btn.addClass("loadvideo").removeClass("video-pause");
+    //   _btn.removeClass("videolive");
+    //   _btn.removeClass("haslive");
+    //   $(".focusinfo").css({
+    //     top: "49.3%"
+    //   });
+    // };
+    // });
+    // $("#video-add").on("click", function() {
+    //   Siren.addsource();
+    // });
     // },
-    AH: function() {
+    AH: function () {
       if (Poi.windowheight == "auto") {
         if ($("h1.main-title").length > 0) {
           var _height = $(window).height();
           $("#centerbg").css({
-            height: _height/2,
-            backgroundSize:'cover'
+            height: _height / 1.3,
+            backgroundSize: 'cover'
           });
           $("#bgvideo").css({
             "min-height": _height
           });
-          $(window).resize(function() {
+          $(window).resize(function () {
             Siren.AH();
           });
         }
@@ -1539,7 +1539,7 @@ var home = location.href,
         $(".headertop").addClass("headertop-bar");
       }
     },
-    PE: function() {
+    PE: function () {
       if ($(".headertop").length > 0) {
         if ($("h1.main-title").length > 0) {
           $(".blank").css({
@@ -1565,32 +1565,32 @@ var home = location.href,
         }
       }
     },
-    CE: function() {
+    CE: function () {
       $(".comments-hidden").show();
       $(".comments-main").hide();
-      $(".comments-hidden").click(function() {
+      $(".comments-hidden").click(function () {
         $(".comments-main").slideDown(500);
         $(".comments-hidden").hide();
       });
       $(".archives").hide();
       $(".archives:first").show();
-      $("#archives-temp h3").click(function() {
+      $("#archives-temp h3").click(function () {
         $(this)
           .next()
           .slideToggle("fast");
         return false;
       });
-      $(".js-toggle-search").on("click", function() {
+      $(".js-toggle-search").on("click", function () {
         $(".js-toggle-search").toggleClass("is-active");
         $(".js-search").toggleClass("is-visible");
       });
-      $(".search_close").on("click", function() {
+      $(".search_close").on("click", function () {
         if ($(".js-search").hasClass("is-visible")) {
           $(".js-toggle-search").toggleClass("is-active");
           $(".js-search").toggleClass("is-visible");
         }
       });
-      $("#show-nav").on("click", function() {
+      $("#show-nav").on("click", function () {
         if ($("#show-nav").hasClass("showNav")) {
           $("#show-nav")
             .removeClass("showNav")
@@ -1611,15 +1611,15 @@ var home = location.href,
           }
         }
       });
-      $("#loading").click(function() {
+      $("#loading").click(function () {
         $("#loading").fadeOut(500);
       });
     },
-    NH: function() {
+    NH: function () {
       var h1 = 0,
         h2 = 50,
         ss = $(document).scrollTop();
-      $(window).scroll(function() {
+      $(window).scroll(function () {
         var s = $(document).scrollTop();
         if (s == h1) {
           $(".site-header").removeClass("yya");
@@ -1638,20 +1638,20 @@ var home = location.href,
         }
       });
     },
-    XLS: function() {
+    XLS: function () {
       $body = window.opera
         ? document.compatMode == "CSS1Compat"
           ? $("html")
           : $("body")
         : $("html,body");
-      $("body").on("click", "#pagination a", function() {
+      $("body").on("click", "#pagination a", function () {
         $(this)
           .addClass("loading")
           .text("");
         $.ajax({
           type: "GET",
           url: $(this).attr("href") + "#main",
-          success: function(data) {
+          success: function (data) {
             result = $(data).find("#main .post");
             nextHref = $(data)
               .find("#pagination a")
@@ -1672,22 +1672,22 @@ var home = location.href,
         return false;
       });
     },
-    XCS: function() {
+    XCS: function () {
       var __cancel = jQuery("#cancel-comment-reply-link"),
         __cancel_text = __cancel.text(),
         __list = "commentwrap";
-      jQuery(document).on("submit", "#commentform", function() {
+      jQuery(document).on("submit", "#commentform", function () {
         jQuery.ajax({
           url: Poi.ajaxurl,
           data: jQuery(this).serialize() + "&action=ajax_comment",
           type: jQuery(this).attr("method"),
           beforeSend: addComment.createButterbar("提交中(Commiting)...."),
-          error: function(request) {
+          error: function (request) {
             var t = addComment;
             t.createButterbar(request.responseText);
           },
-          success: function(data) {
-            jQuery("textarea").each(function() {
+          success: function (data) {
+            jQuery("textarea").each(function () {
               this.value = "";
             });
             var t = addComment,
@@ -1734,7 +1734,7 @@ var home = location.href,
         return false;
       });
       addComment = {
-        moveForm: function(commId, parentId, respondId) {
+        moveForm: function (commId, parentId, respondId) {
           var t = this,
             div,
             comm = t.I(commId),
@@ -1764,7 +1764,7 @@ var home = location.href,
           );
           parent.value = parentId;
           cancel.style.display = "";
-          cancel.onclick = function() {
+          cancel.onclick = function () {
             var t = addComment,
               temp = t.I("wp-temp-form-div"),
               respond = t.I(t.respondId);
@@ -1779,24 +1779,24 @@ var home = location.href,
           };
           try {
             t.I("comment").focus();
-          } catch (e) {}
+          } catch (e) { }
           return false;
         },
-        I: function(e) {
+        I: function (e) {
           return document.getElementById(e);
         },
-        clearButterbar: function(e) {
+        clearButterbar: function (e) {
           if (jQuery(".butterBar").length > 0) {
             jQuery(".butterBar").remove();
           }
         },
-        createButterbar: function(message, showtime) {
+        createButterbar: function (message, showtime) {
           var t = this;
           t.clearButterbar();
           jQuery("body").append(
             '<div class="butterBar butterBar--center"><p class="butterBar-message">' +
-              message +
-              "</p></div>"
+            message +
+            "</p></div>"
           );
           if (showtime > 0) {
             setTimeout("jQuery('.butterBar').remove()", showtime);
@@ -1806,18 +1806,18 @@ var home = location.href,
         }
       };
     },
-    XCP: function() {
+    XCP: function () {
       $body = window.opera
         ? document.compatMode == "CSS1Compat"
           ? $("html")
           : $("body")
         : $("html,body");
-      $("body").on("click", "#comments-navi a", function(e) {
+      $("body").on("click", "#comments-navi a", function (e) {
         e.preventDefault();
         $.ajax({
           type: "GET",
           url: $(this).attr("href"),
-          beforeSend: function() {
+          beforeSend: function () {
             $("#comments-navi").remove();
             $("ul.commentwrap").remove();
             $("#loading-comments").slideDown();
@@ -1829,7 +1829,7 @@ var home = location.href,
             );
           },
           dataType: "html",
-          success: function(out) {
+          success: function (out) {
             result = $(out).find("ul.commentwrap");
             nextlink = $(out).find("#comments-navi");
             $("#loading-comments").slideUp("fast");
@@ -1842,17 +1842,17 @@ var home = location.href,
         });
       });
     },
-    IA: function() {
+    IA: function () {
       POWERMODE.colorful = true;
       POWERMODE.shake = false;
       document.body.addEventListener("input", POWERMODE);
     },
-    GT: function() {
+    GT: function () {
       var offset = 100,
         offset_opacity = 1200,
         scroll_top_duration = 700,
         $back_to_top = $(".cd-top");
-      $(window).scroll(function() {
+      $(window).scroll(function () {
         if ($(this).scrollTop() > offset) {
           $back_to_top.addClass("cd-is-visible");
           $(".changeSkin-gear").css("bottom", "0");
@@ -1873,7 +1873,7 @@ var home = location.href,
           $back_to_top.addClass("cd-fade-out");
         }
       });
-      $back_to_top.on("click", function(event) {
+      $back_to_top.on("click", function (event) {
         event.preventDefault();
         $("body,html").animate(
           {
@@ -1884,7 +1884,7 @@ var home = location.href,
       });
     }
   };
-$(function() {
+$(function () {
   Siren.AH();
   Siren.PE();
   Siren.NH();
@@ -1896,7 +1896,7 @@ $(function() {
   Siren.MN();
   Siren.IA();
   // if (document.body.clientWidth > 860) {
-    // Siren.LV();
+  // Siren.LV();
   // }
   if (window.is_app) injectStyles("#nprogress .bar { display: none; }");
   if (Poi.pjax) {
@@ -1905,12 +1905,12 @@ $(function() {
         fragment: "#page",
         timeout: 8000
       })
-      .on("pjax:send", function() {
+      .on("pjax:send", function () {
         $("#bar").css("width", "0%");
         if (mashiro_option.NProgressON) NProgress.start();
         Siren.MNH();
       })
-      .on("pjax:complete", function() {
+      .on("pjax:complete", function () {
         Siren.AH();
         Siren.PE();
         Siren.CE();
@@ -1932,7 +1932,7 @@ $(function() {
           }
         }
       })
-      .on("submit", ".search-form,.s-search", function(event) {
+      .on("submit", ".search-form,.s-search", function (event) {
         event.preventDefault();
         $.pjax.submit(event, "#page", {
           fragment: "#page",
@@ -1943,7 +1943,7 @@ $(function() {
           $(".js-search").toggleClass("is-visible");
         }
       });
-    mashiro_global.lib.pjax_to_url = function(url, ele) {
+    mashiro_global.lib.pjax_to_url = function (url, ele) {
       $.pjax({
         url: url,
         container: ele,
@@ -1953,7 +1953,7 @@ $(function() {
     };
     window.addEventListener(
       "popstate",
-      function(e) {
+      function (e) {
         Siren.AH();
         Siren.PE();
         Siren.CE();
@@ -1962,7 +1962,7 @@ $(function() {
       false
     );
   }
-  $.fn.postLike = function() {
+  $.fn.postLike = function () {
     if ($(this).hasClass("done")) {
       return false;
     } else {
@@ -1975,13 +1975,13 @@ $(function() {
         um_id: id,
         um_action: action
       };
-      $.post(Poi.ajaxurl, ajax_data, function(data) {
+      $.post(Poi.ajaxurl, ajax_data, function (data) {
         $(rateHolder).html(data);
       });
       return false;
     }
   };
-  $(document).on("click", ".specsZan", function() {
+  $(document).on("click", ".specsZan", function () {
     $(this).postLike();
   });
   console.log(
@@ -2013,7 +2013,7 @@ if (
 ) {
   window.addEventListener(
     "hashchange",
-    function() {
+    function () {
       var id = location.hash.substring(1),
         element;
       if (!/^[A-z0-9_-]+$/.test(id)) {
@@ -2038,7 +2038,7 @@ if (
 
 function render(template, context) {
   var tokenReg = /(\\)?\{([^\{\}\\]+)(\\)?\}/g;
-  return template.replace(tokenReg, function(word, slash1, token, slash2) {
+  return template.replace(tokenReg, function (word, slash1, token, slash2) {
     if (slash1 || slash2) {
       return word.replace("\\", "");
     }
@@ -2053,12 +2053,12 @@ function render(template, context) {
     return currentObject;
   });
 }
-String.prototype.render = function(context) {
+String.prototype.render = function (context) {
   return render(this, context);
 };
 
-$(document).ready(function() {
-  setTimeout(function() {
+$(document).ready(function () {
+  setTimeout(function () {
     isFirstLoad = true;
     if (document.body.clientWidth > 860) {
       $(".changeSkin-gear").css("visibility", "visible");

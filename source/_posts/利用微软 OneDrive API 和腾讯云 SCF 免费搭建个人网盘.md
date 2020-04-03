@@ -1,7 +1,7 @@
 ---
 title: 利用微软 OneDrive API 和腾讯云 SCF 免费搭建个人网盘
 author: ShmilyXI
-avatar: "https://cdn.jsdelivr.net/gh/ShmilyXI/CDN@v1.0.9/img/custom/avatar.jpg"
+avatar: https://cdn.jsdelivr.net/gh/ShmilyXI/Gallerys@master/BokeImage/1055543572.jpeg
 authorLink: "http://www.shmilyxy.cn"
 categories: 技术
 comments: true
