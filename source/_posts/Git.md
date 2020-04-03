@@ -1,7 +1,7 @@
 ---
 title: Git常用命令
 author: Tide
-avatar: https://cdn.jsdelivr.net/gh/ShmilyXI/Gallerys@master/BokeImage/1055543572.jpeg
+avatar: https://cdn.jsdelivr.net/gh/ShmilyXI/Gallerys@master/NoteImage/1055543572.jpeg
 authorLink: hojun.cn
 authorAbout: 潮生
 authorDesc: 一个好奇的人
@@ -13,11 +13,11 @@ tags:
  - 书单
 keywords: Git 命令
 description: Git常用命令
-photos: https://cdn.jsdelivr.net/gh/ShmilyXI/Gallerys@master/BokeImage/AFYRfI.jpg
+photos: https://cdn.jsdelivr.net/gh/ShmilyXI/Gallerys@master/NoteImage/AFYRfI.jpg
 ---
 # Git常用命令
 
-![](https://cdn.jsdelivr.net/gh/ShmilyXI/Gallerys@master/BokeImage/AFYRfI.jpg)
+![](https://cdn.jsdelivr.net/gh/ShmilyXI/Gallerys@master/NoteImage/AFYRfI.jpg)
 
 ```js
 1.设置git账户

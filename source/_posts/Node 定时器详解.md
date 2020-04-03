@@ -1,7 +1,7 @@
 ---
 title: Node 定时器详解
 author: Tide
-avatar: https://cdn.jsdelivr.net/gh/ShmilyXI/Gallerys@master/BokeImage/1055543572.jpeg
+avatar: https://cdn.jsdelivr.net/gh/ShmilyXI/Gallerys@master/NoteImage/1055543572.jpeg
 authorLink: hojun.cn
 authorAbout: 潮生
 authorDesc: 一个好奇的人

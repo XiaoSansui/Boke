@@ -72,9 +72,9 @@ homePageSortType: -1
 homeArticleShown: 10
 # 背景图片 更好的修改
 bg:
-  - https://cdn.jsdelivr.net/gh/ShmilyXI/Gallerys@master/BokeImage/dfN3y9.jpg
-  - https://cdn.jsdelivr.net/gh/ShmilyXI/Gallerys@master/BokeImage/nLILmG.jpg
-  - https://cdn.jsdelivr.net/gh/ShmilyXI/Gallerys@master/BokeImage/2YQ19A.jpg
+  - https://cdn.jsdelivr.net/gh/ShmilyXI/Gallerys@master/NoteImage/dfN3y9.jpg
+  - https://cdn.jsdelivr.net/gh/ShmilyXI/Gallerys@master/NoteImage/nLILmG.jpg
+  - https://cdn.jsdelivr.net/gh/ShmilyXI/Gallerys@master/NoteImage/2YQ19A.jpg
   
   # - https://cdn.jsdelivr.net/gh/ShmilyXI/CDN@v1.0.9/img/background/1.jpg
   # - https://cdn.jsdelivr.net/gh/ShmilyXI/CDN@v1.0.9/img/background/2.jpg

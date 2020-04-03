@@ -2,7 +2,7 @@
 title: {{ title }}
 date: {{ date }}
 author: ShmilyXI
-avatar: https://cdn.jsdelivr.net/gh/ShmilyXI/Gallerys@master/BokeImage/1055543572.jpeg
+avatar: https://cdn.jsdelivr.net/gh/ShmilyXI/Gallerys@master/NoteImage/1055543572.jpeg
 authorLink: http://www.shmilyxy.cn
 authorAbout: 
 authorDesc: 

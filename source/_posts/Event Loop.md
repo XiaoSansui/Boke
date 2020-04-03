@@ -1,7 +1,7 @@
 ---
 title: Event Loop
 author: Tide
-avatar: https://cdn.jsdelivr.net/gh/ShmilyXI/Gallerys@master/BokeImage/1055543572.jpeg
+avatar: https://cdn.jsdelivr.net/gh/ShmilyXI/Gallerys@master/NoteImage/1055543572.jpeg
 authorLink: hojun.cn
 authorAbout: 潮生
 authorDesc: 一个好奇的人
@@ -13,14 +13,14 @@ tags:
  - 书单
 keywords: EventLoop
 description: Event Loop事件循环
-photos: https://cdn.jsdelivr.net/gh/ShmilyXI/Gallerys@master/BokeImage/vR4Roa.jpg
+photos: https://cdn.jsdelivr.net/gh/ShmilyXI/Gallerys@master/NoteImage/vR4Roa.jpg
 ---
 # Event Loop
 
 ## 一、Event Loop 是什么
 
 在开始说 Event Loop 之前，我们先来认识一下它到底是个什么东西。
-![img](https://cdn.jsdelivr.net/gh/ShmilyXI/Gallerys@master/BokeImage/vR4Roa.jpg)
+![img](https://cdn.jsdelivr.net/gh/ShmilyXI/Gallerys@master/NoteImage/vR4Roa.jpg)
 
 > In computer science, the event loop is a programming construct or design pattern that waits for and dispatches events or messages in a program. The event loop works by making a request to some internal or external "event provider" (that generally blocks the request until an event has arrived), then calls the relevant event handler ("dispatches the event"). The event loop is also sometimes referred to as the message dispatcher, message loop, message pump, or run loop.
 
@@ -67,7 +67,7 @@ JavaScript 从诞生起就是单线程，原因大概是不想让浏览器变得
 
 以 Chrome 来说，我们可以通过 Chrome 的任务管理器来看看。
 
-![fJ4Kdy](https://cdn.jsdelivr.net/gh/ShmilyXI/Gallerys@master/BokeImage/fJ4Kdy.jpg)
+![fJ4Kdy](https://cdn.jsdelivr.net/gh/ShmilyXI/Gallerys@master/NoteImage/fJ4Kdy.jpg)
 
 
 
@@ -99,7 +99,7 @@ JavaScript 从诞生起就是单线程，原因大概是不想让浏览器变得
 
 看到这里，总算是进入正题了，先讲讲浏览器端的 Event Loop 是什么样的。
 
-![JS运行机制图](https://cdn.jsdelivr.net/gh/ShmilyXI/Gallerys@master/BokeImage/iu91yJ.jpg)
+![JS运行机制图](https://cdn.jsdelivr.net/gh/ShmilyXI/Gallerys@master/NoteImage/iu91yJ.jpg)
 
 
 
@@ -169,7 +169,7 @@ JavaScript 的代码执行时，主线程会从上到下一步步的执行代码
 
 光说不练假把式，现在就来看一个例子：
 
-![举个栗子](https://cdn.jsdelivr.net/gh/ShmilyXI/Gallerys@master/BokeImage/qkqr3I.jpg)
+![举个栗子](https://cdn.jsdelivr.net/gh/ShmilyXI/Gallerys@master/NoteImage/qkqr3I.jpg)
 
 
 
@@ -306,7 +306,7 @@ Node 中的宏任务和微任务在浏览器端的 JS 相比增加了一些，�
 
 ## 事件循环机制的六个阶段
 
-![img](https://cdn.jsdelivr.net/gh/ShmilyXI/Gallerys@master/BokeImage/WrV58o.jpg)
+![img](https://cdn.jsdelivr.net/gh/ShmilyXI/Gallerys@master/NoteImage/WrV58o.jpg)
 
 ### 六个阶段
 
@@ -370,11 +370,11 @@ setImmediate(() => {
 
 这里涉及 timers 阶段和 check 阶段，按照上面的运行顺序来说，timers 阶段是在第一个执行的，会早于 check 阶段。运行这段程序可以看到如下的结果：
 
-![img](https://cdn.jsdelivr.net/gh/ShmilyXI/Gallerys@master/BokeImage/BIQAkd.jpg)
+![img](https://cdn.jsdelivr.net/gh/ShmilyXI/Gallerys@master/NoteImage/BIQAkd.jpg)
 
 可是再多运行几次，你就会看到如下的结果：
 
-![img](https://cdn.jsdelivr.net/gh/ShmilyXI/Gallerys@master/BokeImage/8xiOdi.jpg)
+![img](https://cdn.jsdelivr.net/gh/ShmilyXI/Gallerys@master/NoteImage/8xiOdi.jpg)
 
 setImmediate 的输出跑到 setTimeout 前面去了，这时候就是：小朋友你是否有很多的问号❓
 

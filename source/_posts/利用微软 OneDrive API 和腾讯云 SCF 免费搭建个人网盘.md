@@ -1,7 +1,7 @@
 ---
 title: 利用微软 OneDrive API 和腾讯云 SCF 免费搭建个人网盘
 author: ShmilyXI
-avatar: https://cdn.jsdelivr.net/gh/ShmilyXI/Gallerys@master/BokeImage/1055543572.jpeg
+avatar: https://cdn.jsdelivr.net/gh/ShmilyXI/Gallerys@master/NoteImage/1055543572.jpeg
 authorLink: "http://www.shmilyxy.cn"
 categories: 技术
 comments: true
@@ -28,9 +28,9 @@ Serverless 拥有近乎无限的扩容能力，空闲时，不运行任何资源
 
 
 | 资源类型   | 每月免费额度 |
-| ---------- | ------------ |
-|    资源使用量 | 40 万 GBs    |
-|    调用次数   | 100 万次     |
+|------------|--------------|
+| 资源使用量 | 40 万 GBs    |
+| 调用次数   | 100 万次     |
 
 所谓外网出流量，即程序通过 SCF 访问外部网络的流量，对于本程序即请求微软 API 的流量，每次调用从几 B 到几 KB 不等；文件上传下载直接与微软交互，不经过 SCF。
 
@@ -99,14 +99,14 @@ https://.../authorization_code?code=...
 
 在新面板中，将 `内存` 修改为 `512M`，当然 `64M` 也是可以运行的，需要说明的是，内存越大可用的免费时长越少；`超时时间` 填写 `30`，随后添加几个 `环境变量`，它们的功能如下：
 
-| 名称 | 含义 | 备注 | 示例 |
-| --- | --- | --- | --- |
-| sitename | 站点名称 | 无 | 我的网盘 |
-| public_path | 要展示的根路径 | 无 | / |
-| private_path | 要展示的根路径 | 使用自定义域名时必须设置 | / |
-| imgup_path | 图床路径 | 其他网页可以引用上传的图片 | / 图床 |
-| passfile | 密码文件名称 | 在某目录下添加该文件，里面写入密码即可加密文件夹 | password.txt |
-| admin | 管理员密码 | 管理员登录后功能更多 | 1234 |
+| 名称         | 含义           | 备注                                             | 示例         |
+|--------------|----------------|--------------------------------------------------|--------------|
+| sitename     | 站点名称       | 无                                               | 我的网盘     |
+| public_path  | 要展示的根路径 | 无                                               | /            |
+| private_path | 要展示的根路径 | 使用自定义域名时必须设置                         | /            |
+| imgup_path   | 图床路径       | 其他网页可以引用上传的图片                       | / 图床       |
+| passfile     | 密码文件名称   | 在某目录下添加该文件，里面写入密码即可加密文件夹 | password.txt |
+| admin        | 管理员密码     | 管理员登录后功能更多                             | 1234         |
 
 ![](https://img13.360buyimg.com/img/jfs/t1/82068/38/8844/46527/5d6b82a8E2b44d81d/3424a3797211a478.png)
 

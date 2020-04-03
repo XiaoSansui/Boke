@@ -1,7 +1,7 @@
 ---
 title: 免费获得OneDrive 5T网盘及正版Office 365授权
 author: ShmilyXI
-avatar: https://cdn.jsdelivr.net/gh/ShmilyXI/Gallerys@master/BokeImage/1055543572.jpeg
+avatar: https://cdn.jsdelivr.net/gh/ShmilyXI/Gallerys@master/NoteImage/1055543572.jpeg
 authorLink: 'http://www.shmilyxy.cn'
 categories: 技术
 comments: true
