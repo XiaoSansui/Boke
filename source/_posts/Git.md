@@ -2,7 +2,7 @@
 title: Git常用命令
 author: Tide
 avatar: https://cdn.jsdelivr.net/gh/ShmilyXI/Gallerys@master/NoteImage/1055543572.jpeg
-authorLink: hojun.cn
+authorLink: 'http://www.shmilyxy.cn'
 authorAbout: 潮生
 authorDesc: 一个好奇的人
 categories: 技术

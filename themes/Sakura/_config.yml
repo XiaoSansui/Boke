@@ -156,7 +156,7 @@ siteBuildingTime: 21/05/2019
 #social  url, img PC端配置
 social:
   qq: { url: https://wpa.qq.com/msgrd?v=3&uin=1262260527&site=qq&menu=yes, img: /img/social/qq.png }
-  wechat: { url: /#, qrcode: /img/custom/wechat.png, img: /img/social/wechat.png }
+  wechat: { url: /#, qrcode: /image/KWDB50.jpg, img: /img/social/wechat.png }
   github: { url: https://github.com/ShmilyXI, img: /img/social/github.png }
   zhihu:
     {
