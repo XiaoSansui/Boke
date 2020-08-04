@@ -2956,7 +2956,7 @@ i.iconfont.hotpost {
     -webkit-line-clamp: 2;
     overflow: hidden;
     word-wrap: break-word;
-    text-align: left;
+    /* text-align: left; */
 }
 
 .post-date,
@@ -3014,7 +3014,7 @@ i.iconfont.hotpost {
     margin: 0;
     padding: 0;
     z-index: 50;
-    color: rgba(0, 0, 0, .66)
+    color: rgba(0, 0, 0, .66);
 }
 
 .float-content .post-text {

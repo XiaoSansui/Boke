@@ -11,7 +11,7 @@ authorDesc:
 tags: 分享
 keywords: OneDrive5T
 description: 利用教育邮箱免费获取onedrive 5T存储空间
-photos: https://cdn.jsdelivr.net/gh/ShmilyXI/CDN@v1.0.9/img/background/25.jpg
+photos: https://cdn.jsdelivr.net/gh/ShmilyXI/Gallerys@master/image/QQ20200605-122339@2x.png
 
 ---
 Onedrive是微软的网络硬盘，普通用户有5G的空间。今天介绍的方法可以达到5T的空间，而且方法简单、快速。

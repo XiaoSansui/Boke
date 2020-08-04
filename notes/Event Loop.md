@@ -263,7 +263,6 @@ JavaScript 的代码执行时，主线程会从上到下一步步的执行代码
   })
 
   console.log('script end')
-复制代码
 ```
 
 按照之前的分析方法去分析之后就会得出一个结果：
@@ -347,7 +346,6 @@ setTimeout(() => {
 setImmediate(() => {
   console.log('setImmediate')
 })
-复制代码
 ```
 
 这里涉及 timers 阶段和 check 阶段，按照上面的运行顺序来说，timers 阶段是在第一个执行的，会早于 check 阶段。运行这段程序可以看到如下的结果：
@@ -388,7 +386,6 @@ setTimeout 的回调函数在 timers 阶段执行，setImmediate 的回调函数
   setImmediate(() => {
     console.log('setImmediate')
   })
-复制代码
 ```
 
 - 让 setImmediate 先执行
@@ -408,7 +405,6 @@ fs.readFile(__dirname, () => {
     console.log('setImmediate')
   })
 })
-复制代码
 ```
 
 ## Node 11.x 的变化
@@ -421,7 +417,6 @@ setTimeout(() => {
  console.log('timeout2')
  Promise.resolve().then(() => console.log('promise resolve'))
 })
-复制代码
 ```
 
 1. node 10 及之前的版本：
