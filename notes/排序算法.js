@@ -33,10 +33,11 @@ const utils = {
 const bubbleSort = (arr) => {
   const length = arr.length,
     array = [...arr];
+  // 元素两两相比
   for (let i = 0; i < length; i++) {
     for (let j = 0; j < length - i - 1; j++) {
       if (array[j] > array[j + 1]) {
-        [array[j + 1], array[j]] = [array[j], array[j + 1]];
+        [array[j + 1], array[j]] = [array[j], array[j + 1]]; // 元素交换
       }
     }
   }
@@ -62,6 +63,7 @@ const selectionSort = (arr) => {
     // 进来先默认最小index为 i
     minIndex = i;
     for (let j = i; j < length; j++) {
+      // 寻找最小的数
       if (array[minIndex] > array[j]) minIndex = j;
     }
     // 如果minIndex不等于i 说明遍历完以后，minIndex变小了，则交换他们的位置
@@ -94,6 +96,33 @@ const insertSort = (arr) => {
 };
 
 /* 
+    -------------------------------------------------- 希尔排序 -------------------------------------------------- 
+    先将整个待排序的记录序列分割成为若干子序列。
+    分别进行直接插入排序。
+    待整个序列中的记录基本有序时，再对全体记录进行依次直接插入排序
+*/
+const shellSort = (arr) => {
+  let length = arr.length,
+    temp,
+    gap = 1;
+  while (gap < length / 3) {
+    gap = gap * 3 + 1;
+  }
+  for (gap; gap > 0; gap = Math.floor(gap / 3)) {
+    for (let i = gap; i < length; i++) {
+      temp = arr[i];
+      let j = i - gap;
+      for (; j >= 0 && arr[j] > temp; j -= gap) {
+        arr[j + gap] = arr[j];
+      }
+      arr[j + gap] = temp;
+    }
+  }
+  return arr;
+};
+
+
+/* 
     -------------------------------------------------- 快速排序 -------------------------------------------------- 
     先找到一个基准点（一般指数组的中部），然后数组被该基准点分为两部分，依次与该基准点数据比较，如果比它小，放左边；反之，放右边。
     左右分别用一个空数组去存储比较后的数据。
@@ -121,32 +150,6 @@ const quickSort = (arr) => {
   }
   // 递归调用，直到元素长度<=1
   return [...quickSort(left), midVal, ...quickSort(right)];
-};
-
-/* 
-    -------------------------------------------------- 希尔排序 -------------------------------------------------- 
-    先将整个待排序的记录序列分割成为若干子序列。
-    分别进行直接插入排序。
-    待整个序列中的记录基本有序时，再对全体记录进行依次直接插入排序
-*/
-const shellSort = (arr) => {
-  let length = arr.length,
-    temp,
-    gap = 1;
-  while (gap < length / 3) {
-    gap = gap * 3 + 1;
-  }
-  for (gap; gap > 0; gap = Math.floor(gap / 3)) {
-    for (let i = gap; i < length; i++) {
-      temp = arr[i];
-      let j = i - gap;
-      for (; j >= 0 && arr[j] > temp; j -= gap) {
-        arr[j + gap] = arr[j];
-      }
-      arr[j + gap] = temp;
-    }
-  }
-  return arr;
 };
 
 /* 
