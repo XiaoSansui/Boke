@@ -60,3 +60,11 @@ const EventEmit = function() {
 // on原理就是将callback存储在一个内部变量的特定key下，这是订阅，trigger的原理就是触发对应key，遍历调用内部变量中对应key里面的方法，这是发布。
 ```
 
+### 删除目录下所有的node_modules文件
+
+```bash
+find . -name 'node_modules' -type d -prune -print -exec rm -rf '{}' \;
+```
+
+
+
