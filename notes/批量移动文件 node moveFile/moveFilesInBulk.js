@@ -4,6 +4,9 @@ var path = require('path');
 var rootPath = path.resolve('/Users/xiao/Desktop/1234');
 
 var count = 0;
+
+/* 批量移动文件 */
+
 function fileDisplay(filePath) {
   //根据文件路径读取文件，返回文件列表
   fs.readdir(filePath, function(err,files) {

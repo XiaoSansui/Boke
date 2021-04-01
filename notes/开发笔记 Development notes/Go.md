@@ -1,5 +1,14 @@
 # GO
 
+## 常用
+
+### beego框架
+
+1. MVC框架 
+   1. `model`放一些操作实际数据库的方法
+   2. `view`放一些模板文件或者`vm`
+   3. `controller`放一些实际操作,view中触发controller的操作去调用model中的方法进行处理(ps 数据库操作:增删改查)
+
 ## fmt.Spritf(格式化输出)
 
 ```go

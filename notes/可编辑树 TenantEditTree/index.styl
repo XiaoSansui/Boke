@@ -1,0 +1,40 @@
+
+.searchTreeWrap {
+  .inlineInput {
+    position: relative;
+
+    .input {
+      padding: 0;
+      height: 24px !important;
+      border-radius: 0 !important;
+    }
+
+    .iconBox {
+      position: absolute;
+      top: 0;
+      right: 5px;
+    }
+  }
+
+  .titleWrap {
+    width: 100%;
+    position: relative;
+
+    .titleIcon {
+      position: absolute;
+      right: 0;
+      top: 0;
+      display: none;
+    }
+
+    &:hover {
+      .titleIcon {
+        display: inline-block;
+      }
+    }
+  }
+
+  .ant-tree li .ant-tree-node-content-wrapper {
+    width: calc(100% - 24px);
+  }
+}
