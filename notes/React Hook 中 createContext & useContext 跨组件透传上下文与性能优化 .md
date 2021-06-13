@@ -147,7 +147,7 @@ export default memo((props = {}) => {
 
 ### 4、效果：
 
-![1.gif](http://www.ptbird.cn/usr/uploads/2019/12/1309173419.gif)
+![1309173419](https://cdn.jsdelivr.net/gh/ShmilyXI/Gallerys@master/BokeImage/images/1309173419.gif)
 
 可以发现，在子组件中点击按钮，直接调用 Context 透传过来的方法，可以修改父组件的 state，子组件则会重新渲染。
 
@@ -231,7 +231,7 @@ export default memo((props = {}) => {
 
 效果如下：
 
-![2.gif](http://www.ptbird.cn/usr/uploads/2019/12/227792683.gif)
+![227792683](https://cdn.jsdelivr.net/gh/ShmilyXI/Gallerys@master/BokeImage/images/227792683.gif)
 
 
 
@@ -310,7 +310,7 @@ export default memo((props = {}) => {
 
 ### 3、效果
 
-![3.gif](http://www.ptbird.cn/usr/uploads/2019/12/1548272877.gif)
+![1548272877](https://cdn.jsdelivr.net/gh/ShmilyXI/Gallerys@master/BokeImage/images/1548272877.gif)
 
 
 
@@ -362,7 +362,7 @@ export default (props = {}) => {
 
 ### 2、优化后效果：
 
-![4.gif](http://www.ptbird.cn/usr/uploads/2019/12/595924759.gif)
+![595924759](https://cdn.jsdelivr.net/gh/ShmilyXI/Gallerys@master/BokeImage/images/595924759.gif)
 
 从上面效果可以发现，当 number+step=count 不变的时候，是不会触发 return 中 DOM 的重新渲染的
 

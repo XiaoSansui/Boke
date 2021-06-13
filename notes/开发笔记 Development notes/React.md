@@ -55,7 +55,32 @@
    // console.log ---> 'This is children function!'
    ```
 
-4. React中渲染HTML字符串
+4. 函数式组件父组件引入子组件全部方法
+
+   ```jsx
+   /* ---------- 父组件 ---------- */
+   import React, { useRef } from 'react';
+   const childrenRef = useRef(); // 生成ref
+   <Children ref={childrenRef} />
+   
+   /* ---------- 子组件 ---------- */
+   import React, { forwardRef } from 'react';
+   const Children =(props,ref)=>{
+     const childrenFun=()=>{
+       console.log('This is children function!')
+     }
+   }
+   // 暴露方法的时候需要使用forwardRef包裹组件
+   export default forwardRef(Children);
+   
+   /* ---------- 父组件调用子组件方法 ---------- */
+   childrenRef.current.getChildrenFun(); 
+   // console.log ---> 'This is children function!'
+   ```
+   
+   
+   
+5. React中渲染HTML字符串
 
    ```jsx
    <div dangerouslySetInnerHTML={{ __html: "<h1>hello world!</h1>" }}></div>
